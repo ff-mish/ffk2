@@ -1,0 +1,92 @@
+@charset "utf-8";
+/*
+ * avene 2013 10 
+ */
+
+/* Reset
+================================================================================================= */
+body{color:#000;background:#fff;font-size:12px;}
+body{font-family:"Helvetica Neue","Microsoft YaHei",arial,SimHei,sans-serif;padding:1px 0 0;}
+h1,h2,h3{font-size:100%;}
+body,h1,h2,h3,h4,ul,li,p,img{margin:0;padding:0;border:0;}
+img{margin:0;line-height:normal;}
+em,i{font-style:normal;text-decoration:none}
+ul{list-style:none;}
+* {outline: none;-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}
+textarea,input {-webkit-user-select: text;-khtml-user-select: text;-moz-user-select: text;-ms-user-select: text;user-select: text;}
+
+/* Commonly Used 
+================================================================================================= */
+a{text-decoration:none}
+.cs-clear{+zoom:1;}
+.cs-clear:before,
+.cs-clear:after{clear:both;content:".";font-size:0;display:block;height:0;overflow:hidden;visibility:hidden;}
+.btn {cursor: pointer;}
+.ac { text-align: center; }
+.fl { float: left; }
+.f36 { font-size: 36px; }
+.f14 { font-size: 14px; }
+.f144 { font-size: 14.4px; }
+.f72 { font-size: 72px; }
+.fb { font-weight: bold; }
+.f200 { font-weight: 100; }
+.lh18 { line-height: 18px; }
+h1,h2 { text-transform: uppercase; }
+
+/* Page Used 
+=================================================================================  */
+.indexMap { position: relative; }
+.indexMapImg img { width: 100%; height: 100%; }
+.logo { position: absolute; left: 190px; top: 74px; }
+.indexAd { position: absolute; left: 190px; top: 410px; color: #282828; 
+	font-size: 106px; font-weight: bold; line-height: 94px; }
+.slideDownTip { position: absolute; left: 50%; bottom: 65px; margin-left: -30px; }
+.slideDownTip a { display: block; width: 59px; height: 22px; 
+	background: url("../img/arrow.jpg") no-repeat; }
+.indexCon { background-color: #000; color: #fff; }
+.companys { width: 1175px; margin: 0 auto; }
+.company { width: 410px; margin-top: 375px; }
+.companyR { margin-top: 374px; }
+.company img { display: block; margin: 0 auto 45px auto; }
+.company p { font-size: 24px; font-weight: lighter; text-transform: uppercase; line-height: 30px; }
+.speed { display: block; font-size: 36px; font-weight: bold; margin: 18px 0 25px 0; }
+.btn_website { display: block; width: 239px; height: 75px; line-height: 75px; text-align: center;
+ font-size: 24px; color: #fff; border: 1px solid #fff; margin: 14px auto 0 auto; }
+.btn_website:hover { border-color: #0600ff; background-color: #0600ff; color: #000; }
+.plus { margin: 575px 165px 0 165px; font-size: 36px; font-weight: bold; }
+.equal { width: 1175px; margin: 232px auto 152px auto; font-size: 36px; font-weight: bold; }
+.indexImg { width: 1175px; margin: 0 auto 115px auto; }
+.main_heading { width: 1175px; margin: 0 auto 130px auto; font-size: 60px; font-weight: bold; 
+line-height: 60px; }
+.subheading { width: 1175px; margin: 0 auto; font-size: 24px; font-weight: bold; 
+line-height: 60px; text-transform: uppercase; }
+.triangle { width: 1175px; margin: 101px auto 138px auto; }
+.triangle img { display: block; margin: 0 auto; }
+.triangle h2 { margin: 48px 0 18px 0; }
+.triangle p { width: 487px; margin: 0 auto; }
+.hotspots { width: 1600px; margin: 62px auto 150px auto; }
+.hotspots h1 { margin-bottom: 90px; }
+.hotspots a { color: #fff; font-size: 18px; margin-right: 35px; }
+.bigMap { margin-top: 106px; }
+.trusted { width: 1175px; margin: 0 auto 408px auto; }
+.trusted h1 { margin-bottom: 120px; }
+.trustedLogo a { margin-right: 153px; }
+.showcase { width: 1175px; margin: 0 auto 207px auto; }
+.showcase a { display: block; float: left; margin-right: 8px; }
+.showcase h1 { margin-bottom: 86px; }
+.showcaseImg a { color: #fff; font-size: 18px; }
+.showcaseImg img { margin-bottom: 20px; }
+
+.page1video { width: 90%!important; margin: 0 auto; }
+.inner_video { width: 100%!important; margin: 0 auto; position: relative; }
+.page1video video { width: 100%; cursor: pointer; }
+
+
+
+
+
+
+
+
+
+

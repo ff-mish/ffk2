@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+
+	<link rel="stylesheet" href="css/style.css" />
+	<link href="css/video-js.css" rel="stylesheet">
+
+	<script src="js/jquery.1.11.2.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/video.js"></script>
+	<script>
+	$(function () {
+		$(window).resize(function () {
+		  	var height = $(window).width()*0.9 / (1280/720);
+		    $('#myvideo').height(height);
+		}).trigger('resize');
+
+
+		videojs("myvideo", { "controls": true, "autoplay": false, "preload": "auto", "poster": "img/page1video.jpg" })
+		.on('ended', function() {
+			 $('.vjs-poster').show();
+		});
+
+	});
+	</script>
+
+	<script>
+
+		$(function () {
+			$('#slideAlink').click(function (){
+				slideAlink();
+			});
+			
+		});
+	</script>
+
+	<title></title>
+</head>
+
+<body>
+<div>
+	<div class="indexMap">
+		<div class="indexMapImg"><img src="img/indexMap.jpg" /></div>
+		<div class="logo"><img src="img/logo.jpg" /></div>
+		<p class="indexAd">worldwide <br /> digital centric <br /> event</p>
+		<div class="slideDownTip"><a href="javascript:;" id="slideAlink"></a></div>
+	</div>
+	<div class="indexCon">
+
+		<div class="companys cs-clear">
+			<div class="company fl ac">
+				<img src="img/ff.jpg" />
+				<p>First french independant digitale creative group</p>
+				<span class="speed">450+</span>
+				<p>digital talents</p>
+				<a class="btn_website" href="javascript:;">
+					website
+				</a>
+			</div>
+			<div class="plus fl">+</div>
+			<div class="company companyR fl ac">
+				<img src="img/k2.jpg" />
+				<p>First french independant event creative group</p>
+				<span class="speed">120+</span>
+				<p>production talents</p>
+				<a class="btn_website" href="javascript:;">
+					website
+				</a>
+			</div>
+		</div>
+
+		<div class="equal ac">=</div>
+
+		<div class="indexImg ac"><img src="img/indexImg_FFK2.jpg" /></div>
+
+		<h1 class="main_heading ac">first french <br/> independant digital centric <br/> event group</h1>
+
+		<p class="subheading ac">driven  by 3 principes</p>
+
+		<div class="triangle ac">
+			<img src="img/indeximg_triangle.jpg" />
+			<h2 class="f36 fb">#1digital impact</h2>
+			<p class="f144 f100 lh18">
+				Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.
+			</p>
+		</div>
+
+		<div class="triangle ac">
+			<img src="img/indeximg_polygon.jpg" />
+			<h2 class="f36 fb">#2 scalability</h2>
+			<p class="f144 f100 lh18">
+				Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.
+			</p>
+		</div>
+
+		<div class="triangle ac">
+			<img src="img/indeximg_polygon1.jpg" />
+			<h2 class="f36 fb">#3 cost control</h2>
+			<p class="f144 f100 lh18">
+				Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.
+			</p>
+		</div>
+
+		<div class="hotspots ac">
+			<h1 class="f72 fb">hotspots</h1>
+			<div>
+				<a href="#">new york</a>
+				<a href="#">paris</a>
+				<a href="#">hong kong</a>
+				<a href="#">shanghai</a>
+				<a href="#">beijing</a>
+				<a href="#">seoul</a>
+				<a href="#">tokyo</a>
+			</div>
+			<div class="bigMap"><img src="img/bigMap.jpg" /></div>
+		</div>
+
+		<div class="trusted ac">
+			<h1 class="f72 fb">trusted from</h1>
+			<div class="trustedLogo">
+				<a href="#"><img src="img/trustedLogo1.jpg" /></a>
+				<a href="#"><img src="img/trustedLogo2.jpg" /></a>
+			</div>
+		</div>
+
+		<div class="showcase ac">
+			<h1 class="f72 fb">showcased on</h1>
+			<div class="showcaseImg cs-clear">
+				<a href="#"><img src="img/showcase1.jpg" /><br />READ</a>
+				<a href="#"><img src="img/showcase2.jpg" /><br />READ</a>
+				<a href="#"><img src="img/showcase3.jpg" /><br />READ</a>
+				<a href="#"><img src="img/showcase4.jpg" /><br />READ</a>
+			</div>
+		</div>
+
+		<div class="video ac">
+			<h1 class="f72 fb">showreel</h1>
+			<div class="page1video">
+				<video id="myvideo" class="video-js vjs-default-skin vjs-big-play-centered" width="auto">
+					<source src="video/1.mp4" type="video/mp4" />
+				</video>		
+			</div>
+		</div>
+
+	</div>
+
+
+
+</div>
+</body>
+
+</html>
