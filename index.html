@@ -5,35 +5,34 @@
 	<meta charset="utf-8" />
 
 	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/responsive.css" />
 	<link href="css/video-js.css" rel="stylesheet">
 
 	<script src="js/jquery.1.11.2.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/video.js"></script>
 	<script>
-	$(function () {
-		$(window).resize(function () {
-		  	var height = $(window).width()*0.9 / (1280/720);
-		    $('#myvideo').height(height);
-		}).trigger('resize');
-
-
-		videojs("myvideo", { "controls": true, "autoplay": false, "preload": "auto", "poster": "img/page1video.jpg" })
-		.on('ended', function() {
-			 $('.vjs-poster').show();
-		});
-
-	});
-	</script>
-
-	<script>
-
 		$(function () {
 			$('#slideAlink').click(function (){
-				slideAlink();
+				$('body').stop().animate({
+			        scrollTop: ( $(window).height() + 2500 ) / 3
+			    }, 500);
 			});
-			
+			$('.hotspots').tabSwitch();
 		});
+
+		$.fn.tabSwitch=function ()
+		{
+			var aBtn = this.find('.circleWrap a');
+			var aDiv=this.find('.circleLinks a');
+			aBtn.click(function (){
+				aBtn.removeClass('circle_big');
+				$(this).addClass('circle_big');
+				aDiv.removeClass('current');
+				aDiv.eq($(this).index()).addClass('current');
+			});			
+		};
+
 	</script>
 
 	<title></title>
@@ -42,12 +41,20 @@
 <body>
 <div>
 	<div class="indexMap">
-		<div class="indexMapImg"><img src="img/indexMap.jpg" /></div>
+		<div class="indexMapImg">
+			<img src="img/indexMap.jpg" />
+			<div class="indexMapLinks">
+				<a href="#indexCon" class="indexMapLinks1"></a>
+				<a href="#subheading" class="indexMapLinks2"></a>
+				<a href="#showcase" class="indexMapLinks3"></a>
+				<a href="#contact" class="indexMapLinks4"></a>
+			</div>
+		</div>
 		<div class="logo"><img src="img/logo.jpg" /></div>
 		<p class="indexAd">worldwide <br /> digital centric <br /> event</p>
 		<div class="slideDownTip"><a href="javascript:;" id="slideAlink"></a></div>
 	</div>
-	<div class="indexCon">
+	<div class="indexCon" id="indexCon">
 
 		<div class="companys cs-clear">
 			<div class="company fl ac">
@@ -77,7 +84,7 @@
 
 		<h1 class="main_heading ac">first french <br/> independant digital centric <br/> event group</h1>
 
-		<p class="subheading ac">driven  by 3 principes</p>
+		<p class="subheading ac" id="subheading">driven  by 3 principes</p>
 
 		<div class="triangle ac">
 			<img src="img/indeximg_triangle.jpg" />
@@ -104,43 +111,63 @@
 		</div>
 
 		<div class="hotspots ac">
-			<h1 class="f72 fb">hotspots</h1>
-			<div>
-				<a href="#">new york</a>
-				<a href="#">paris</a>
-				<a href="#">hong kong</a>
-				<a href="#">shanghai</a>
-				<a href="#">beijing</a>
-				<a href="#">seoul</a>
-				<a href="#">tokyo</a>
+			<h1 class="f72 fb mb105">hotspots</h1>
+			<div class="circleLinks">
+				<a class="circleLinks1" href="javascript:;">new york</a>
+				<a class="circleLinks2" href="javascript:;">paris</a>
+				<a class="circleLinks3" href="javascript:;">hong kong</a>
+				<a class="circleLinks4" href="javascript:;">shanghai</a>
+				<a class="circleLinks5" href="javascript:;">beijing</a>
+				<a class="circleLinks6" href="javascript:;">seoul</a>
+				<a class="circleLinks7" href="javascript:;">tokyo</a>
 			</div>
-			<div class="bigMap"><img src="img/bigMap.jpg" /></div>
+			<div class="bigMap">
+				<img src="img/bigMap.jpg" />
+				<div class="circleWrap">
+					<a class="circle1 circle_small" href="javascript:;"></a>
+					<a class="circle2 circle_small" href="javascript:;"></a>
+					<a class="circle3 circle_small" href="javascript:;"></a>
+					<a class="circle4 circle_small" href="javascript:;"></a>
+					<a class="circle5 circle_small" href="javascript:;"></a>
+					<a class="circle6 circle_small" href="javascript:;"></a>
+					<a class="circle7 circle_small" href="javascript:;"></a>
+				</div>
+			</div>
 		</div>
 
 		<div class="trusted ac">
-			<h1 class="f72 fb">trusted from</h1>
+			<h1 class="f72 fb mb105">trusted from</h1>
 			<div class="trustedLogo">
-				<a href="#"><img src="img/trustedLogo1.jpg" /></a>
-				<a href="#"><img src="img/trustedLogo2.jpg" /></a>
+				<img src="img/trustedLogo1.jpg" />
+				<img src="img/trustedLogo2.jpg" />
 			</div>
 		</div>
 
-		<div class="showcase ac">
-			<h1 class="f72 fb">showcased on</h1>
+		<div class="showcase ac" id="showcase">
+			<h1 class="f72 fb mb105">showcased on</h1>
 			<div class="showcaseImg cs-clear">
-				<a href="#"><img src="img/showcase1.jpg" /><br />READ</a>
-				<a href="#"><img src="img/showcase2.jpg" /><br />READ</a>
-				<a href="#"><img src="img/showcase3.jpg" /><br />READ</a>
-				<a href="#"><img src="img/showcase4.jpg" /><br />READ</a>
+				<a href="javascript:;"><img src="img/showcase1.jpg" /><br />READ</a>
+				<a href="javascript:;"><img src="img/showcase2.jpg" /><br />READ</a>
+				<a href="javascript:;"><img src="img/showcase3.jpg" /><br />READ</a>
+				<a href="javascript:;"><img src="img/showcase4.jpg" /><br />READ</a>
 			</div>
 		</div>
 
 		<div class="video ac">
-			<h1 class="f72 fb">showreel</h1>
+			<h1 class="f72 fb mb105">showreel</h1>
 			<div class="page1video">
 				<video id="myvideo" class="video-js vjs-default-skin vjs-big-play-centered" width="auto">
 					<source src="video/1.mp4" type="video/mp4" />
 				</video>		
+			</div>
+		</div>
+
+		<div class="contact ac" id="contact">
+			<h1 class="f72 fb mb105">contact us now</h1>
+			<div class="contact_links cs-clear">
+				<a href="javascript:;">newbiz@ffk2.com</a>
+				<a href="javascript:;">press@ffk2.com</a>
+				<a href="javascript:;">hr@ffk2.com</a>
 			</div>
 		</div>
 
@@ -149,6 +176,20 @@
 
 
 </div>
-</body>
 
+
+<script>
+$(function () {
+	$(window).resize(function () {
+	  	var height = $(window).width()*0.9 / (1280/720);
+	    $('#myvideo').height(height);
+	}).trigger('resize');
+});
+videojs("myvideo", { "controls": true, "autoplay": false, "preload": "auto", "poster": "img/page1video.jpg" })
+	.on('ended', function() {
+	 $('.vjs-poster').show();
+});
+</script>
+
+</body>
 </html>

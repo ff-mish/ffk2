@@ -31,11 +31,13 @@ a{text-decoration:none}
 .fb { font-weight: bold; }
 .f200 { font-weight: 100; }
 .lh18 { line-height: 18px; }
+.mb105 { margin-bottom: 105px; }
 h1,h2 { text-transform: uppercase; }
 
 /* Page Used 
 =================================================================================  */
-.indexMap { position: relative; }
+.indexMap { position: relative; top: 0; }
+.indexMapImg { position: relative; }
 .indexMapImg img { width: 100%; height: 100%; }
 .logo { position: absolute; left: 190px; top: 74px; }
 .indexAd { position: absolute; left: 190px; top: 410px; color: #282828; 
@@ -44,7 +46,7 @@ h1,h2 { text-transform: uppercase; }
 .slideDownTip a { display: block; width: 59px; height: 22px; 
 	background: url("../img/arrow.jpg") no-repeat; }
 .indexCon { background-color: #000; color: #fff; }
-.companys { width: 1175px; margin: 0 auto; }
+.companys { width: 90%; margin: 0 auto; }
 .company { width: 410px; margin-top: 375px; }
 .companyR { margin-top: 374px; }
 .company img { display: block; margin: 0 auto 45px auto; }
@@ -54,32 +56,47 @@ h1,h2 { text-transform: uppercase; }
  font-size: 24px; color: #fff; border: 1px solid #fff; margin: 14px auto 0 auto; }
 .btn_website:hover { border-color: #0600ff; background-color: #0600ff; color: #000; }
 .plus { margin: 575px 165px 0 165px; font-size: 36px; font-weight: bold; }
-.equal { width: 1175px; margin: 232px auto 152px auto; font-size: 36px; font-weight: bold; }
-.indexImg { width: 1175px; margin: 0 auto 115px auto; }
-.main_heading { width: 1175px; margin: 0 auto 130px auto; font-size: 60px; font-weight: bold; 
+.equal { width: 90%; margin: 232px auto 152px auto; font-size: 36px; font-weight: bold; }
+.indexImg { width: 90%; margin: 0 auto 115px auto; }
+.main_heading { width: 90%; margin: 0 auto 130px auto; font-size: 60px; font-weight: bold; 
 line-height: 60px; }
-.subheading { width: 1175px; margin: 0 auto; font-size: 24px; font-weight: bold; 
+.subheading { width: 90%; margin: 0 auto; font-size: 24px; font-weight: bold; 
 line-height: 60px; text-transform: uppercase; }
-.triangle { width: 1175px; margin: 101px auto 138px auto; }
+.triangle { width: 90%; margin: 0 auto 138px auto; }
 .triangle img { display: block; margin: 0 auto; }
 .triangle h2 { margin: 48px 0 18px 0; }
 .triangle p { width: 487px; margin: 0 auto; }
-.hotspots { width: 1600px; margin: 62px auto 150px auto; }
-.hotspots h1 { margin-bottom: 90px; }
+.hotspots { width: 90%; margin: 0 auto 150px auto; }
 .hotspots a { color: #fff; font-size: 18px; margin-right: 35px; }
-.bigMap { margin-top: 106px; }
-.trusted { width: 1175px; margin: 0 auto 408px auto; }
-.trusted h1 { margin-bottom: 120px; }
-.trustedLogo a { margin-right: 153px; }
-.showcase { width: 1175px; margin: 0 auto 207px auto; }
-.showcase a { display: block; float: left; margin-right: 8px; }
-.showcase h1 { margin-bottom: 86px; }
-.showcaseImg a { color: #fff; font-size: 18px; }
-.showcaseImg img { margin-bottom: 20px; }
-
+.bigMap { position: relative; margin-top: 121px; }
+.trusted { width: 90%; margin: 0 auto 408px auto; }
+.trustedLogo { width: 759px; margin: 0 auto; }
+.trustedLogo img { display: inline-block; margin: 0 76px; }
+.showcase { width: 90%; margin: 0 auto 207px auto; }
+.showcaseImg a { float: left; width: 24%; margin: 0 4px; color: #fff; font-size: 18px; }
+.showcaseImg img { width: 100%; margin-bottom: 20px; }
+.video { margin: 0 auto 200px auto; }
 .page1video { width: 90%!important; margin: 0 auto; }
 .inner_video { width: 100%!important; margin: 0 auto; position: relative; }
 .page1video video { width: 100%; cursor: pointer; }
+.contact { width: 90%; margin: 0 auto; }
+.contact_links a { float: left; width: 344px; height: 75px; margin: 0 41px 380px 41px; 
+	line-height: 75px; border: 1px solid #fff; font-size: 24px; font-weight: 100; 
+	color: #fff; }
+.indexMapLinks a { position: absolute; z-index: 2; top: 6%; width: 100px; height: 30px; 
+	border: 1px solid red; }
+.indexMapLinks1 { right: 50%; } .indexMapLinks2 { right: 38%; }
+.indexMapLinks3 { right: 26%; } .indexMapLinks4 { right: 14%; }
+.circleWrap a { position: absolute; z-index: 2; }
+.circle_small { width: 7px; height: 7px; background: url("../img/circle_small.png") no-repeat; }
+.circle_big { width: 15px; height: 15px; background: url("../img/circle_big.png") no-repeat; }
+.circle1 { left: 445px; top: 275px; } .circle2 { left: 785px; top: 255px; } 
+.circle3 { left: 1113px; top: 383px; } 
+.circle4 { left: 1173px; top: 313px; }  
+.circle5 { left: 1180px; top: 330px; } 
+.circle6 { left: 1300px; top: 275px; } 
+.circle7 { left: 1330px; top: 290px; } 
+.hotspots a.current { font-size: 24px; position: relative; z-index: 9; }
 
 
 
