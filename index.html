@@ -13,28 +13,11 @@
 	<script src="js/video.js"></script>
 	<script>
 		$(function () {
-			$('#slideAlink').click(function (){
-				$('body').stop().animate({
-			        scrollTop: ( $(window).height() + 2500 ) / 3
-			    }, 500);
-			});
-
-
-
-
-
-			$('.hotspots').tabSwitch();
-
-
-
-
-
-
-
 			
+			$('.hotspots').tabSwitch();
+		
 			var $circleL = $('.circle1').offset().left;
 			var $circleT = $('.circle1').offset().top;
-
 			$(window).resize(function(){
 				var $mapW = $('.bigMap').width();
 				var $mapH = $('.bigMap').height();
@@ -49,13 +32,11 @@
 				$('.indexMap').css('height', $(window).height() + 'px');
 			});
 
-
-
-
-
-			
-			
-			
+			$('#slideAlink').click(function (){
+				$('body').stop().animate({
+			        scrollTop:  $('.indexMap').height() 
+			    }, 500);
+			});
 
 
 		});
