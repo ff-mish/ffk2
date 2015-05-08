@@ -18,7 +18,46 @@
 			        scrollTop: ( $(window).height() + 2500 ) / 3
 			    }, 500);
 			});
+
+
+
+
+
 			$('.hotspots').tabSwitch();
+
+
+
+
+
+
+
+			
+			var $circleL = $('.circle1').offset().left;
+			var $circleT = $('.circle1').offset().top;
+
+			$(window).resize(function(){
+				var $mapW = $('.bigMap').width();
+				var $mapH = $('.bigMap').height();
+				$('.circle1').css({ "left": (445 / 1600) * $mapW, "top": (275 / 876) * $mapH });
+				$('.circle2').css({ "left": (785 / 1600) * $mapW, "top": (255 / 876) * $mapH });
+				$('.circle3').css({ "left": (1113 / 1600) * $mapW, "top": (383 / 876) * $mapH });
+				$('.circle4').css({ "left": (1173 / 1600) * $mapW, "top": (313 / 876) * $mapH });
+				$('.circle5').css({ "left": (1180 / 1600) * $mapW, "top": (330 / 876) * $mapH });
+				$('.circle6').css({ "left": (1300 / 1600) * $mapW, "top": (275 / 876) * $mapH });
+				$('.circle7').css({ "left": (1330 / 1600) * $mapW, "top": (290 / 876) * $mapH });
+
+				$('.indexMap').css('height', $(window).height() + 'px');
+			});
+
+
+
+
+
+			
+			
+			
+
+
 		});
 
 		$.fn.tabSwitch=function ()
@@ -43,38 +82,44 @@
 	<div class="indexMap">
 		<div class="indexMapImg">
 			<img src="img/indexMap.jpg" />
-			<div class="indexMapLinks">
-				<a href="#indexCon" class="indexMapLinks1"></a>
-				<a href="#subheading" class="indexMapLinks2"></a>
-				<a href="#showcase" class="indexMapLinks3"></a>
-				<a href="#contact" class="indexMapLinks4"></a>
-			</div>
 		</div>
-		<div class="logo"><img src="img/logo.jpg" /></div>
+		<nav class="nav">
+			<div class="logo">
+				<img src="img/logo.jpg" />
+			</div>
+			<div class="indexMapLinks">
+				<a href="#indexCon" class="indexMapLinks1">concept</a>
+				<a href="#subheading" class="indexMapLinks2">principes</a>
+				<a href="#showcase" class="indexMapLinks3">cases</a>
+				<a href="#contact" class="indexMapLinks4">contact</a>
+			</div>
+		</nav>
 		<p class="indexAd">worldwide <br /> digital centric <br /> event</p>
 		<div class="slideDownTip"><a href="javascript:;" id="slideAlink"></a></div>
 	</div>
 	<div class="indexCon" id="indexCon">
 
-		<div class="companys cs-clear">
-			<div class="company fl ac">
-				<img src="img/ff.jpg" />
-				<p>First french independant digitale creative group</p>
-				<span class="speed">450+</span>
-				<p>digital talents</p>
-				<a class="btn_website" href="javascript:;">
-					website
-				</a>
-			</div>
-			<div class="plus fl">+</div>
-			<div class="company companyR fl ac">
-				<img src="img/k2.jpg" />
-				<p>First french independant event creative group</p>
-				<span class="speed">120+</span>
-				<p>production talents</p>
-				<a class="btn_website" href="javascript:;">
-					website
-				</a>
+		<div class="companys">
+			<div class="companys_inner cs-clear">
+				<div class="company fl ac">
+					<img src="img/ff.jpg" />
+					<p>First french independant digitale creative group</p>
+					<span class="speed">450+</span>
+					<p>digital talents</p>
+					<a class="btn_website" href="javascript:;">
+						website
+					</a>
+				</div>
+				<div class="plus fl">+</div>
+				<div class="company companyR fl ac">
+					<img src="img/k2.jpg" />
+					<p>First french independant event creative group</p>
+					<span class="speed">120+</span>
+					<p>production talents</p>
+					<a class="btn_website" href="javascript:;">
+						website
+					</a>
+				</div>
 			</div>
 		</div>
 

@@ -1,7 +1,9 @@
 
-
+@media only screen and (max-width:1430px){
+    .contact_links a { width: 350px; margin: 0 20px 380px 20px; }
+}
 @media only screen and (max-width:1360px){
-    .contact_links a { margin: 0 20px 380px 20px; }
+    .contact_links a { width: 330px; margin: 0 20px 380px 20px; }
 }
 @media only screen and (max-width:1300px){
     .contact_links a { width: 300px; }
