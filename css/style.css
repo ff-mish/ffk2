@@ -38,14 +38,14 @@ h1,h2 { text-transform: uppercase; }
 =================================================================================  */
 .indexMap { position: relative; top: 0; background-color: #fff; overflow: hidden; }
 .indexMapImg { float: right; }
-.logo { position: absolute; left: 190px; top: 74px; }
+.logo { position: absolute; left: 10%; top: 74px; }
 .logo img { display: block; }
-.indexAd { position: absolute; left: 10%; top: 50%; margin-top: -141px; color: #282828; 
+.indexAd { position: fixed; z-index: 2; left: 10%; top: 50%; margin-top: -141px; color: #282828; 
 	font-size: 106px; font-weight: bold; line-height: 94px; }
 .slideDownTip { position: absolute; left: 50%; bottom: 5%; margin-left: -30px; }
 .slideDownTip a { display: block; width: 59px; height: 22px; 
-	background: url("../img/arrow.jpg") no-repeat; }
-.indexCon { background-color: #000; color: #fff; }
+	background: url("../img/arrow.png") no-repeat; }
+.indexCon { position: relative; z-index: 3; background-color: #000; color: #fff; }
 .companys { width: 90%; margin: 0 auto; }
 .companys_inner { width: 1180px; margin: 0 auto; }
 .company { width: 410px; margin-top: 375px; }
@@ -59,6 +59,7 @@ h1,h2 { text-transform: uppercase; }
 .plus { margin: 575px 165px 0 165px; font-size: 36px; font-weight: bold; }
 .equal { width: 90%; margin: 232px auto 152px auto; font-size: 36px; font-weight: bold; }
 .indexImg { width: 90%; margin: 0 auto 115px auto; }
+.indexImg img { width: 100%; height: 100%; }
 .main_heading { width: 90%; margin: 0 auto 130px auto; font-size: 60px; font-weight: bold; 
 line-height: 60px; }
 .subheading { width: 90%; margin: 0 auto; font-size: 24px; font-weight: bold; 
@@ -68,7 +69,7 @@ line-height: 60px; text-transform: uppercase; }
 .triangle h2 { margin: 48px 0 18px 0; }
 .triangle p { width: 487px; margin: 0 auto; }
 .hotspots { width: 90%; margin: 0 auto 150px auto; }
-.hotspots a { color: #fff; font-size: 18px; margin-right: 35px; }
+.hotspots a { color: #fff; font-size: 18px; margin-right: 35px; text-transform: uppercase; }
 .bigMap { position: relative; margin-top: 121px; }
 .bigMap img { width: 100%; height: 100%; }
 .trusted { width: 90%; margin: 0 auto 408px auto; }
@@ -82,10 +83,11 @@ line-height: 60px; text-transform: uppercase; }
 .inner_video { width: 100%!important; margin: 0 auto; position: relative; }
 .page1video video { width: 100%; cursor: pointer; }
 .contact { width: 90%; margin: 0 auto; }
-.contact_links a { display: inline-block; width: 344px; height: 75px; margin: 0 41px 380px 41px; 
+.contact_links { padding-bottom: 380px; }
+.contact_links a { display: inline-block; width: 344px; height: 75px; margin: 0 41px 0 41px; 
 	line-height: 75px; border: 1px solid #fff; font-size: 24px; font-weight: 100; 
 	color: #fff; }
-.indexMapLinks { position: absolute; right: 4%; top: 92px; }
+.indexMapLinks { position: fixed; z-index: 9; right: 4%; top: 92px; }
 .indexMapLinks a { float: left; margin-right: 155px; font-size: 14px; font-weight: 100; 
 	color: #585858; }
 
@@ -99,7 +101,8 @@ line-height: 60px; text-transform: uppercase; }
 .circle6 { left: 1300px; top: 275px; } 
 .circle7 { left: 1330px; top: 290px; } 
 .hotspots a.current { font-size: 24px; position: relative; z-index: 9; }
-
+.content { background-attachment: fixed; background-repeat: no-repeat;
+	position: relative; }
 
 
 

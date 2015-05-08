@@ -3,14 +3,17 @@
 
 <head>
 	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 	<link rel="stylesheet" href="css/style.css" />
 	<link rel="stylesheet" href="css/responsive.css" />
-	<link href="css/video-js.css" rel="stylesheet">
+	<link href="css/video-js.css" rel="stylesheet" />
 
 	<script src="js/jquery.1.11.2.js"></script>
-	<script src="js/main.js"></script>
 	<script src="js/video.js"></script>
+
+	<script src="js/TweenMax.min.js"></script>
+	<script src="js/jquery.superscrollorama.js"></script>
 	<script>
 		$(function () {
 			
@@ -37,6 +40,52 @@
 			        scrollTop:  $('.indexMap').height() 
 			    }, 500);
 			});
+
+		
+			var $win=$(window),$header=$(".indexMapLinks"),height=$win.height(),st;
+            $win.scroll(function(e){
+                st=$win.scrollTop();
+                if(st<height && st>1){
+                    $header.fadeOut();
+                    $('.indexAd').css('margin-top', st*0.3-141);
+                    $('.indexMapImg').css('margin-top', st*0.7);
+                }else{
+                    $header.fadeIn();
+                }
+            });
+
+
+			var controller = $.superscrollorama({
+				triggerAtCenter: false,
+				playoutAnimations: true
+			});
+			controller.addTween('#indexCon', 
+	    	TweenMax.from($('#fade1'), .5, {css:{opacity:0}}),0,-600)
+	    	.addTween('#fade1', 
+	    	TweenMax.from($('#fade2'), .5, {css:{opacity:0}}),0,-600)
+	    	.addTween('#fade2', 
+	    	TweenMax.from($('#fade3'), .5, {css:{opacity:0}}),0,-600)
+	    	.addTween('#fade3', 
+	    	TweenMax.from($('#fade4'), .5, {css:{opacity:0}}),0,-550)
+	    	.addTween('#fade4', 
+	    	TweenMax.from($('#fade5'), .5, {css:{opacity:0}}),0,-500)
+	    	.addTween('#fade5', 
+	    	TweenMax.from($('#fade6'), .5, {css:{opacity:0}}),0,-450)
+	    	.addTween('#fade6', 
+	    	TweenMax.from($('#fade7'), .5, {css:{opacity:0}}),0,-400)
+	    	.addTween('#fade7', 
+	    	TweenMax.from($('#fade8'), .5, {css:{opacity:0}}),0,-350)
+	    	.addTween('#fade8', 
+	    	TweenMax.from($('#fade9'), .5, {css:{opacity:0}}),0,-320)
+	    	.addTween('#fade9', 
+	    	TweenMax.from($('#fade10'), .5, {css:{opacity:0}}),0,-290)
+	    	.addTween('#fade10', 
+	    	TweenMax.from($('#showcase'), .5, {css:{opacity:0}}),0,-260)
+	    	.addTween('#showcase', 
+	    	TweenMax.from($('#fade12'), .5, {css:{opacity:0}}),0,-230)
+	    	.addTween('#fade12', 
+	    	TweenMax.from($('#contact'), .5, {css:{opacity:0}}),0,-200)
+	    	;
 
 
 		});
@@ -66,7 +115,7 @@
 		</div>
 		<nav class="nav">
 			<div class="logo">
-				<img src="img/logo.jpg" />
+				<img src="img/logo.png" />
 			</div>
 			<div class="indexMapLinks">
 				<a href="#indexCon" class="indexMapLinks1">concept</a>
@@ -80,7 +129,7 @@
 	</div>
 	<div class="indexCon" id="indexCon">
 
-		<div class="companys">
+		<div class="companys" id="fade1">
 			<div class="companys_inner cs-clear">
 				<div class="company fl ac">
 					<img src="img/ff.jpg" />
@@ -104,15 +153,15 @@
 			</div>
 		</div>
 
-		<div class="equal ac">=</div>
+		<div class="equal ac" id="fade2">=</div>
 
-		<div class="indexImg ac"><img src="img/indexImg_FFK2.jpg" /></div>
+		<div class="indexImg ac" id="fade3"><img src="img/indexImg_FFK2.jpg" /></div>
 
-		<h1 class="main_heading ac">first french <br/> independant digital centric <br/> event group</h1>
+		<h1 class="main_heading ac" id="fade4">first french <br/> independant digital centric <br/> event group</h1>
 
 		<p class="subheading ac" id="subheading">driven  by 3 principes</p>
 
-		<div class="triangle ac">
+		<div class="triangle ac" id="fade5">
 			<img src="img/indeximg_triangle.jpg" />
 			<h2 class="f36 fb">#1digital impact</h2>
 			<p class="f144 f100 lh18">
@@ -120,7 +169,7 @@
 			</p>
 		</div>
 
-		<div class="triangle ac">
+		<div class="triangle ac" id="fade6">
 			<img src="img/indeximg_polygon.jpg" />
 			<h2 class="f36 fb">#2 scalability</h2>
 			<p class="f144 f100 lh18">
@@ -128,7 +177,7 @@
 			</p>
 		</div>
 
-		<div class="triangle ac">
+		<div class="triangle ac" id="fade7">
 			<img src="img/indeximg_polygon1.jpg" />
 			<h2 class="f36 fb">#3 cost control</h2>
 			<p class="f144 f100 lh18">
@@ -136,7 +185,7 @@
 			</p>
 		</div>
 
-		<div class="hotspots ac">
+		<div class="hotspots ac" id="fade8">
 			<h1 class="f72 fb mb105">hotspots</h1>
 			<div class="circleLinks">
 				<a class="circleLinks1" href="javascript:;">new york</a>
@@ -147,7 +196,7 @@
 				<a class="circleLinks6" href="javascript:;">seoul</a>
 				<a class="circleLinks7" href="javascript:;">tokyo</a>
 			</div>
-			<div class="bigMap">
+			<div class="bigMap" id="fade9">
 				<img src="img/bigMap.jpg" />
 				<div class="circleWrap">
 					<a class="circle1 circle_small" href="javascript:;"></a>
@@ -161,7 +210,7 @@
 			</div>
 		</div>
 
-		<div class="trusted ac">
+		<div class="trusted ac" id="fade10">
 			<h1 class="f72 fb mb105">trusted from</h1>
 			<div class="trustedLogo">
 				<img src="img/trustedLogo1.jpg" />
@@ -179,7 +228,7 @@
 			</div>
 		</div>
 
-		<div class="video ac">
+		<div class="video ac" id="fade12">
 			<h1 class="f72 fb mb105">showreel</h1>
 			<div class="page1video">
 				<video id="myvideo" class="video-js vjs-default-skin vjs-big-play-centered" width="auto">
