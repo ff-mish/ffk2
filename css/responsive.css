@@ -7,11 +7,12 @@
 @media only screen and (max-width:1150px){ 
      .plus { margin: 575px 100px 0 100px; }
      .showcaseImg a { margin: 0 2px; }
+     .indexMapLinks a { margin-right: 100px; }
+     .company { width: 360px; }
 }
 @media only screen and (max-width:900px){
-    .indexMapLinks a { margin-right: 100px; }
     .plus { margin: 575px 20px 0 20px; }
-    .company { width: 360px; }
+    
 }
 
 
@@ -43,8 +44,7 @@
     .triangle p { width: 400px; }
     .hotspots a { font-size: 12px; margin-right: 6px; }
     .f72 { font-size: 38px; }
-    .contact_links a  { font-size: 14px; }
-    .vjs-big-play-button span { background: url('../img/icon_video_play1.png') no-repeat; }
+    .contact_links a  { font-size: 12px; height: 40px; line-height: 40px; }
 }
 @media only screen and (max-width:320px){
     .indexAd { font-size: 50px; line-height: 50px; margin-top: -90px }

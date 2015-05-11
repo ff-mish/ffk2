@@ -23,9 +23,12 @@
 		
 			var $circleL = $('.circle1').offset().left;
 			var $circleT = $('.circle1').offset().top;
-			$(window).resize(function(){
+
+			//mapCircle
+			function mapCircle(){
 				var $mapW = $('.bigMap').width();
 				var $mapH = $('.bigMap').height();
+				console.log($mapW+' '+$mapH);
 				$('.circle1').css({ "left": (445 / 1600) * $mapW, "top": (275 / 876) * $mapH });
 				$('.circle2').css({ "left": (785 / 1600) * $mapW, "top": (255 / 876) * $mapH });
 				$('.circle3').css({ "left": (1113 / 1600) * $mapW, "top": (383 / 876) * $mapH });
@@ -33,7 +36,14 @@
 				$('.circle5').css({ "left": (1180 / 1600) * $mapW, "top": (330 / 876) * $mapH });
 				$('.circle6').css({ "left": (1300 / 1600) * $mapW, "top": (275 / 876) * $mapH });
 				$('.circle7').css({ "left": (1330 / 1600) * $mapW, "top": (290 / 876) * $mapH });
+			}
 
+				console.log($('.bigMap').height());
+			mapCircle();
+
+			$(window).resize(function(){
+				mapCircle();
+				
 				$('.indexMap').css('height', $(window).height() + 'px');
 			});
 
@@ -43,65 +53,86 @@
 			    }, 500);
 			});
 
-		
+			//animate
 			var $win=$(window),$header=$(".indexMapLinks"),height=$win.height(),st;
+			var indexAdMT=141;
+			if($win.width()<321){
+				indexAdMT=90;
+			}
             $win.scroll(function(e){
                 st=$win.scrollTop();
                 if(st<height && st>1){
                     $header.fadeOut();
-                    $('.indexAd').css('margin-top', -(st*0.3+141) );
+                    $('.indexAd').css('margin-top', -(st*0.3+indexAdMT) );
                     $('.indexMapImg').css('margin-top', -st*0.5 );
                 }else{
-                    $header.fadeIn();
+	                $header.fadeIn();
+                	if(st<height){
+	                    $header.removeClass('fcActive');
+	                }else{
+	                    $header.addClass('fcActive');
+	                }
                 }
             });
+            //animate
 
-
+            //动态加载
 			var controller = $.superscrollorama({
 				triggerAtCenter: false,
 				playoutAnimations: true
 			});
 			controller.addTween('#indexCon', 
-	    	TweenMax.from($('#fade1'), .5, {css:{opacity:0}}),0,-600)
+	    	TweenMax.from($('#fade1'), .5, {css:{opacity:0}}),0,-100)
 	    	.addTween('#fade1', 
-	    	TweenMax.from($('#fade2'), .5, {css:{opacity:0}}),0,-600)
+	    	TweenMax.from($('#fade2'), .5, {css:{opacity:0}}),0,-100)
 	    	.addTween('#fade2', 
-	    	TweenMax.from($('#fade3'), .5, {css:{opacity:0}}),0,-600)
+	    	TweenMax.from($('#fade3'), .5, {css:{opacity:0}}),0,-100)
 	    	.addTween('#fade3', 
-	    	TweenMax.from($('#fade4'), .5, {css:{opacity:0}}),0,-550)
+	    	TweenMax.from($('#fade4'), .5, {css:{opacity:0}}),0,-100)
 	    	.addTween('#fade4', 
-	    	TweenMax.from($('#fade5'), .5, {css:{opacity:0}}),0,-500)
+	    	TweenMax.from($('#fade5'), .5, {css:{opacity:0}}),0,-100)
 	    	.addTween('#fade5', 
-	    	TweenMax.from($('#fade6'), .5, {css:{opacity:0}}),0,-450)
+	    	TweenMax.from($('#fade6'), .5, {css:{opacity:0}}),0,-100)
 	    	.addTween('#fade6', 
-	    	TweenMax.from($('#fade7'), .5, {css:{opacity:0}}),0,-400)
+	    	TweenMax.from($('#fade7'), .5, {css:{opacity:0}}),0,-100)
 	    	.addTween('#fade7', 
-	    	TweenMax.from($('#fade8'), .5, {css:{opacity:0}}),0,-350)
+	    	TweenMax.from($('#fade8'), .5, {css:{opacity:0}}),0,-100)
 	    	.addTween('#fade8', 
-	    	TweenMax.from($('#fade9'), .5, {css:{opacity:0}}),0,-320)
+	    	TweenMax.from($('#fade9'), .5, {css:{opacity:0}}),0,-100)
 	    	.addTween('#fade9', 
-	    	TweenMax.from($('#fade10'), .5, {css:{opacity:0}}),0,-290)
+	    	TweenMax.from($('#fade10'), .5, {css:{opacity:0}}),0,-100)
 	    	.addTween('#fade10', 
-	    	TweenMax.from($('#showcase'), .5, {css:{opacity:0}}),0,-260)
+	    	TweenMax.from($('#showcase'), .5, {css:{opacity:0}}),0,-100)
 	    	.addTween('#showcase', 
-	    	TweenMax.from($('#fade12'), .5, {css:{opacity:0}}),0,-230)
+	    	TweenMax.from($('#fade12'), .5, {css:{opacity:0}}),0,-100)
 	    	.addTween('#fade12', 
-	    	TweenMax.from($('#contact'), .5, {css:{opacity:0}}),0,-200)
+	    	TweenMax.from($('#contact'), .5, {css:{opacity:0}}),0,-100)
 	    	;
-
+	    	//动态加载
 
 		});
+		
+		//mapCircle
 
 		$.fn.tabSwitch=function ()
 		{
 			var aBtn = this.find('.circleWrap a');
 			var aDiv=this.find('.circleLinks a');
-			aBtn.click(function (){
-				aBtn.removeClass('circle_big');
-				$(this).addClass('circle_big');
+			aBtn.mouseover(function (){
+				aBtn.css( {'width':'8px', 'height':'8px'} );
+				//$(this).addClass('circle_big');
+				$(this).stop().animate({ width:'16px', height:'16px' });
 				aDiv.removeClass('current');
 				aDiv.eq($(this).index()).addClass('current');
-			});			
+			});		
+			aDiv.mouseover(function (){
+				aDiv.removeClass('current');
+				$(this).addClass('current');
+				aBtn.css( {'width':'8px', 'height':'8px'} );
+				//aBtn.eq($(this).index()).addClass('circle_big');
+				aBtn.stop();
+				aBtn.eq($(this).index()).animate({ width:'16px', height:'16px' });
+			});				
 		};
 
 	</script>
@@ -234,7 +265,7 @@
 			<h1 class="f72 fb mb105">showreel</h1>
 			<div class="page1video">
 				<video id="myvideo" class="video-js vjs-default-skin vjs-big-play-centered" width="auto">
-					<source src="video/1.mp4" type="video/mp4" />
+					<source src="video/3.mp4" type="video/mp4" />
 				</video>		
 			</div>
 		</div>
@@ -242,9 +273,9 @@
 		<div class="contact ac" id="contact">
 			<h1 class="f72 fb mb105">contact us now</h1>
 			<div class="contact_links cs-clear">
-				<a href="javascript:;">newbiz@ffk2.com</a>
-				<a href="javascript:;">press@ffk2.com</a>
-				<a href="javascript:;">hr@ffk2.com</a>
+				<a href="mailto:newbiz@ffk2.com">newbiz@ffk2.com</a>
+				<a href="mailto:press@ffk2.com">press@ffk2.com</a>
+				<a href="mailto:hr@ffk2.com">hr@ffk2.com</a>
 			</div>
 		</div>
 
@@ -255,17 +286,87 @@
 </div>
 
 
+
+
+<div id="orientLayer" class="mod-orient-layer" style="display: none;">
+    <div class="mod-orient-layer__content">
+        <i class="icon mod-orient-layer__icon-orient"></i>
+        <div class="mod-orient-layer__desc">please</div>
+    </div>
+</div>
+
+
 <script>
 $(function () {
 	$(window).resize(function () {
-	  	var height = $(window).width()*0.9 / (1280/720);
+	  	var height = $(window).width()*1.0 / (1280/720);
 	    $('#myvideo').height(height);
 	}).trigger('resize');
 });
 videojs("myvideo", { "controls": true, "autoplay": false, "preload": "auto", "poster": "img/page1video.jpg" })
-	.on('ended', function() {
-	 $('.vjs-poster').show();
+	.on('ended', function (){
+	 		$('.vjs-poster').show();
+		}
+	);
+
+//判断移动端横屏
+
+var orientLayer = document.getElementById("orientLayer");
+	//判断横屏竖屏
+function checkDirect() {
+    if (document.documentElement.clientHeight >= document.documentElement.clientWidth) {
+        return "portrait";
+    } else {
+        return "landscape";
+    }
+}
+	//显示屏幕方向提示浮层
+function orientNotice() {
+    var orient = checkDirect();
+    if (orient == "portrait") {
+        orientLayer.style.display = "none";
+    } else {
+        orientLayer.style.display = "block";
+    }
+}
+function init() {
+    orientNotice();
+    window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", function () {
+        setTimeout(orientNotice, 200);
+    })
+}
+
+	//是否为移动端
+function browserRedirect() {
+    var sUserAgent = navigator.userAgent.toLowerCase();
+    var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+    var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+    var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+    var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+    var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+    var bIsAndroid = sUserAgent.match(/android/i) == "android";
+    var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+    var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+    // document.writeln("您的浏览设备为：");
+    if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+        //console.log("phone");
+        return true;
+    } else {
+        //console.log("pc");
+    	return false;
+    }
+}
+
+$(function () {
+	if(browserRedirect()){
+		init();
+		$('.indexMapLinks').hide();
+	};
 });
+
+//判断移动端横屏
+
+
 </script>
 
 </body>

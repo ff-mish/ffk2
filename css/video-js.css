@@ -343,7 +343,7 @@ easily in the skin designer. http://designer.videojs.com/
     top: 50%;
     margin:-30px 0 0 -30px;
     position: absolute;
-    background: url('../img/icon_video_play.png') no-repeat;
+    background: url('../img/icon_video_play1.png') no-repeat;
     width: 141px;
     height: 141px;
 }
@@ -660,3 +660,5 @@ body.vjs-full-window {
 
 .video-btn-zoom {background:#000 url('../img/icon_video_zoom.gif') no-repeat 4px 4px;background-color:rgba(0,0,0,0.7);width:20px;height:20px;position: absolute;right:8px;bottom:47px;}
 .video-btn-zoom.active {background-position:-24px 4px;}
+
+.vjs-control-bar { display: none; }
