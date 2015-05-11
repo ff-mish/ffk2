@@ -29,7 +29,7 @@
     .hotspots a { margin-right: 30px; }
     .trustedLogo { width: 460px; }
     .trustedLogo img { margin: 0; }
-    .contact_links a { width: 31%; margin: 0; font-size: 20px; }
+    .contact_links a { width: 100%; margin: 20px 0 0 0; }
 }
 @media only screen and (max-width:640px){
     .hotspots a { margin-right: 15px; }
@@ -44,7 +44,6 @@
     .triangle p { width: 400px; }
     .hotspots a { font-size: 12px; margin-right: 6px; }
     .f72 { font-size: 38px; }
-    .contact_links a  { font-size: 12px; height: 40px; line-height: 40px; }
 }
 @media only screen and (max-width:320px){
     .indexAd { font-size: 50px; line-height: 50px; margin-top: -90px }
@@ -62,5 +61,6 @@
     .hotspots a { display: inline-block; margin-bottom: 10px; }
     .f36 { font-size: 28px; }
     .main_heading { font-size: 40px; line-height: 40px; }
+    .bigMap { margin-top: 70px; }
 }
 
