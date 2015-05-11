@@ -97,14 +97,13 @@ line-height: 60px; text-transform: uppercase; }
 .circle_small { width: 7px; height: 7px; background: url("../img/circle_small.png") no-repeat; }
 .circle_big { width: 15px; height: 15px; background: url("../img/circle_big.png") no-repeat; }
 */
+.circleWrap a.circle1 { left: 445px; top: 275px; } .circleWrap a.circle2 { left: 785px; top: 255px; } 
+.circleWrap a.circle3 { left: 1113px; top: 383px; } 
+.circleWrap a.circle4 { left: 1173px; top: 313px; }  
+.circleWrap a.circle5 { left: 1180px; top: 330px; } 
+.circleWrap a.circle6 { left: 1300px; top: 275px; } 
+.circleWrap a.circle7 { left: 1330px; top: 290px; } 
 
-
-.circle1 { left: 445px; top: 275px; } .circle2 { left: 785px; top: 255px; } 
-.circle3 { left: 1113px; top: 383px; } 
-.circle4 { left: 1173px; top: 313px; }  
-.circle5 { left: 1180px; top: 330px; } 
-.circle6 { left: 1300px; top: 275px; } 
-.circle7 { left: 1330px; top: 290px; } 
 .hotspots a.current { font-size: 24px; position: relative; z-index: 9; }
 .content { background-attachment: fixed; background-repeat: no-repeat;
 	position: relative; }

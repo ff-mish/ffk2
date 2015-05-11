@@ -13,32 +13,21 @@
 
 	<script src="js/jquery.1.11.2.js"></script>
 	<script src="js/video.js"></script>
+	<script src="js/jquery.lazyload.js"></script>
 
 	<script src="js/TweenMax.min.js"></script>
 	<script src="js/jquery.superscrollorama.js"></script>
 	<script>
 		$(function () {
-			
+
+			$("img.lazy").lazyload();
+
 			$('.hotspots').tabSwitch();
 		
 			var $circleL = $('.circle1').offset().left;
 			var $circleT = $('.circle1').offset().top;
 
-			//mapCircle
-			function mapCircle(){
-				var $mapW = $('.bigMap').width();
-				var $mapH = $('.bigMap').height();
-				console.log($mapW+' '+$mapH);
-				$('.circle1').css({ "left": (445 / 1600) * $mapW, "top": (275 / 876) * $mapH });
-				$('.circle2').css({ "left": (785 / 1600) * $mapW, "top": (255 / 876) * $mapH });
-				$('.circle3').css({ "left": (1113 / 1600) * $mapW, "top": (383 / 876) * $mapH });
-				$('.circle4').css({ "left": (1173 / 1600) * $mapW, "top": (313 / 876) * $mapH });
-				$('.circle5').css({ "left": (1180 / 1600) * $mapW, "top": (330 / 876) * $mapH });
-				$('.circle6').css({ "left": (1300 / 1600) * $mapW, "top": (275 / 876) * $mapH });
-				$('.circle7').css({ "left": (1330 / 1600) * $mapW, "top": (290 / 876) * $mapH });
-			}
-
-				console.log($('.bigMap').height());
+			//console.log($('.bigMap').height());
 			mapCircle();
 
 			$(window).resize(function(){
@@ -113,14 +102,27 @@
 		});
 		
 		//mapCircle
+		function mapCircle(){
+			var $mapW = $('.bigMap').width();
+			var $mapH = $('.bigMap').height();
+			console.log($mapW+' '+$mapH);
+			$('.circle1').css({ "left": (445 / 1600) * $mapW, "top": (275 / 876) * $mapH });
+			$('.circle2').css({ "left": (785 / 1600) * $mapW, "top": (255 / 876) * $mapH });
+			$('.circle3').css({ "left": (1113 / 1600) * $mapW, "top": (383 / 876) * $mapH });
+			$('.circle4').css({ "left": (1173 / 1600) * $mapW, "top": (313 / 876) * $mapH });
+			$('.circle5').css({ "left": (1180 / 1600) * $mapW, "top": (330 / 876) * $mapH });
+			$('.circle6').css({ "left": (1300 / 1600) * $mapW, "top": (275 / 876) * $mapH });
+			$('.circle7').css({ "left": (1330 / 1600) * $mapW, "top": (290 / 876) * $mapH });
+		}
+		//mapCircle
 
+		//mapHover
 		$.fn.tabSwitch=function ()
 		{
 			var aBtn = this.find('.circleWrap a');
 			var aDiv=this.find('.circleLinks a');
 			aBtn.mouseover(function (){
 				aBtn.css( {'width':'8px', 'height':'8px'} );
-				//$(this).addClass('circle_big');
 				$(this).stop().animate({ width:'16px', height:'16px' });
 				aDiv.removeClass('current');
 				aDiv.eq($(this).index()).addClass('current');
@@ -129,11 +131,11 @@
 				aDiv.removeClass('current');
 				$(this).addClass('current');
 				aBtn.css( {'width':'8px', 'height':'8px'} );
-				//aBtn.eq($(this).index()).addClass('circle_big');
 				aBtn.stop();
 				aBtn.eq($(this).index()).animate({ width:'16px', height:'16px' });
 			});				
 		};
+		//mapHover
 
 	</script>
 
@@ -144,11 +146,11 @@
 <div>
 	<div class="indexMap">
 		<div class="indexMapImg">
-			<img src="img/indexMap.jpg" />
+			<img class="lazy" data-original="img/indexMap.jpg" />
 		</div>
 		<nav class="nav">
 			<div class="logo">
-				<img src="img/logo.png" />
+				<img class="lazy" data-original="img/logo.png" />
 			</div>
 			<div class="indexMapLinks">
 				<a href="#indexCon" class="indexMapLinks1">concept</a>
@@ -165,7 +167,7 @@
 		<div class="companys" id="fade1">
 			<div class="companys_inner cs-clear">
 				<div class="company fl ac">
-					<img src="img/ff.jpg" />
+					<img class="lazy" data-original="img/ff.jpg" />
 					<p>First french independant digitale creative group</p>
 					<span class="speed">450+</span>
 					<p>digital talents</p>
@@ -175,7 +177,7 @@
 				</div>
 				<div class="plus fl">+</div>
 				<div class="company companyR fl ac">
-					<img src="img/k2.jpg" />
+					<img class="lazy" data-original="img/k2.jpg" />
 					<p>First french independant event creative group</p>
 					<span class="speed">120+</span>
 					<p>production talents</p>
@@ -188,14 +190,14 @@
 
 		<div class="equal ac" id="fade2">=</div>
 
-		<div class="indexImg ac" id="fade3"><img src="img/indexImg_FFK2.jpg" /></div>
+		<div class="indexImg ac" id="fade3"><img class="lazy" data-original="img/indexImg_FFK2.jpg" /></div>
 
 		<h1 class="main_heading ac" id="fade4">first french <br/> independant digital centric <br/> event group</h1>
 
 		<p class="subheading ac" id="subheading">driven  by 3 principes</p>
 
 		<div class="triangle ac" id="fade5">
-			<img src="img/indeximg_triangle.jpg" />
+			<img class="lazy" data-original="img/indeximg_triangle.jpg" />
 			<h2 class="f36 fb">#1digital impact</h2>
 			<p class="f144 f100 lh18">
 				Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.
@@ -203,7 +205,7 @@
 		</div>
 
 		<div class="triangle ac" id="fade6">
-			<img src="img/indeximg_polygon.jpg" />
+			<img class="lazy" data-original="img/indeximg_polygon.jpg" />
 			<h2 class="f36 fb">#2 scalability</h2>
 			<p class="f144 f100 lh18">
 				Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.
@@ -211,7 +213,7 @@
 		</div>
 
 		<div class="triangle ac" id="fade7">
-			<img src="img/indeximg_polygon1.jpg" />
+			<img class="lazy" data-original="img/indeximg_polygon1.jpg" />
 			<h2 class="f36 fb">#3 cost control</h2>
 			<p class="f144 f100 lh18">
 				Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.
@@ -230,15 +232,15 @@
 				<a class="circleLinks7" href="javascript:;">tokyo</a>
 			</div>
 			<div class="bigMap" id="fade9">
-				<img src="img/bigMap.jpg" />
+				<img class="lazy" data-original="img/bigMap.jpg" />
 				<div class="circleWrap">
-					<a class="circle1 circle_small" href="javascript:;"></a>
-					<a class="circle2 circle_small" href="javascript:;"></a>
-					<a class="circle3 circle_small" href="javascript:;"></a>
-					<a class="circle4 circle_small" href="javascript:;"></a>
-					<a class="circle5 circle_small" href="javascript:;"></a>
-					<a class="circle6 circle_small" href="javascript:;"></a>
-					<a class="circle7 circle_small" href="javascript:;"></a>
+					<a class="circle1" href="javascript:;"></a>
+					<a class="circle2" href="javascript:;"></a>
+					<a class="circle3" href="javascript:;"></a>
+					<a class="circle4" href="javascript:;"></a>
+					<a class="circle5" href="javascript:;"></a>
+					<a class="circle6" href="javascript:;"></a>
+					<a class="circle7" href="javascript:;"></a>
 				</div>
 			</div>
 		</div>
@@ -246,18 +248,18 @@
 		<div class="trusted ac" id="fade10">
 			<h1 class="f72 fb mb105">trusted from</h1>
 			<div class="trustedLogo">
-				<img src="img/trustedLogo1.jpg" />
-				<img src="img/trustedLogo2.jpg" />
+				<img class="lazy" data-original="img/trustedLogo1.jpg" />
+				<img class="lazy" data-original="img/trustedLogo2.jpg" />
 			</div>
 		</div>
 
 		<div class="showcase ac" id="showcase">
 			<h1 class="f72 fb mb105">showcased on</h1>
 			<div class="showcaseImg cs-clear">
-				<a href="javascript:;"><img src="img/showcase1.jpg" /><br />READ</a>
-				<a href="javascript:;"><img src="img/showcase2.jpg" /><br />READ</a>
-				<a href="javascript:;"><img src="img/showcase3.jpg" /><br />READ</a>
-				<a href="javascript:;"><img src="img/showcase4.jpg" /><br />READ</a>
+				<a href="javascript:;"><img class="lazy" data-original="img/showcase1.jpg" /><br />READ</a>
+				<a href="javascript:;"><img class="lazy" data-original="img/showcase2.jpg" /><br />READ</a>
+				<a href="javascript:;"><img class="lazy" data-original="img/showcase3.jpg" /><br />READ</a>
+				<a href="javascript:;"><img class="lazy" data-original="img/showcase4.jpg" /><br />READ</a>
 			</div>
 		</div>
 
