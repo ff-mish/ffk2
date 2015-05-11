@@ -37,8 +37,8 @@ h1,h2 { text-transform: uppercase; }
 /* Page Used 
 =================================================================================  */
 .indexMap { position: relative; top: 0; background-color: #fff; overflow: hidden; }
-.indexMapImg { float: right; }
-.logo { position: absolute; left: 10%; top: 74px; }
+.indexMapImg { position: fixed; top: 0; right: 0; z-index: 2; }
+.logo { position: absolute; z-index: 5; left: 10%; top: 74px; }
 .logo img { display: block; }
 .indexAd { position: fixed; z-index: 2; left: 10%; top: 50%; margin-top: -141px; color: #282828; 
 	font-size: 106px; font-weight: bold; line-height: 94px; }
@@ -76,7 +76,7 @@ line-height: 60px; text-transform: uppercase; }
 .trustedLogo { width: 759px; margin: 0 auto; }
 .trustedLogo img { display: inline-block; margin: 0 76px; }
 .showcase { width: 90%; margin: 0 auto 207px auto; }
-.showcaseImg a { float: left; width: 24%; margin: 0 4px; color: #fff; font-size: 18px; }
+.showcaseImg a { display: inline-block; width: 24%; margin: 0 4px; color: #fff; font-size: 18px; }
 .showcaseImg img { width: 100%; margin-bottom: 20px; }
 .video { margin: 0 auto 200px auto; }
 .page1video { width: 90%!important; margin: 0 auto; }
@@ -84,7 +84,7 @@ line-height: 60px; text-transform: uppercase; }
 .page1video video { width: 100%; cursor: pointer; }
 .contact { width: 90%; margin: 0 auto; }
 .contact_links { padding-bottom: 380px; }
-.contact_links a { display: inline-block; width: 344px; height: 75px; margin: 0 41px 0 41px; 
+.contact_links a { display: inline-block; width: 344px; height: 75px; margin: 0 41px; 
 	line-height: 75px; border: 1px solid #fff; font-size: 24px; font-weight: 100; 
 	color: #fff; }
 .indexMapLinks { position: fixed; z-index: 9; right: 4%; top: 92px; }

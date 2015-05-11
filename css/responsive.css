@@ -1,11 +1,21 @@
 
-@media only screen and (max-width:1366px){
-    .contact_links a { width: 320px; }
+
+
+@media only screen and (max-width:1450px){
+    .contact_links a { width: 30%; margin: 0 2px; }
 }
-@media only screen and (max-width:1280px){
-    .contact_links a { width: 290px; }
+@media only screen and (max-width:1150px){ 
+     .plus { margin: 575px 100px 0 100px; }
+     .showcaseImg a { margin: 0 2px; }
 }
-@media only screen and (max-width:768px){
+@media only screen and (max-width:900px){
+    .indexMapLinks a { margin-right: 100px; }
+    .plus { margin: 575px 20px 0 20px; }
+    .company { width: 360px; }
+}
+
+
+@media only screen and (max-width:800px){
     .indexMapLinks a { margin-right: 50px; }
     .indexAd { font-size: 90px; }
     .companys_inner { width: 100%; margin: 0; }
@@ -14,7 +24,11 @@
     .hotspots a { font-size: 14px; }
     .showcaseImg a { width: 48%; margin-bottom: 50px; }
     .contact_links { padding-bottom: 340px; }
-    .contact_links a { margin-bottom: 40px; }
+    .f72 { font-size: 66px; }
+    .hotspots a { margin-right: 30px; }
+    .trustedLogo { width: 460px; }
+    .trustedLogo img { margin: 0; }
+    .contact_links a { width: 31%; margin: 0; font-size: 20px; }
 }
 @media only screen and (max-width:640px){
     .hotspots a { margin-right: 15px; }
@@ -23,13 +37,30 @@
     .trustedLogo img { margin: 0; }
 }
 @media only screen and (max-width:480px){
-    .indexAd { font-size: 80px; }
-    .indexMapLinks a { margin-right: 22px; }
+    .indexAd { font-size: 66px; }
+    .indexMapLinks { right: 1%; }
+    .indexMapLinks a { margin-right: 10px; }
     .triangle p { width: 400px; }
     .hotspots a { font-size: 12px; margin-right: 6px; }
-    .f72 { font-size: 44px; }
+    .f72 { font-size: 38px; }
+    .contact_links a  { font-size: 14px; }
+    .vjs-big-play-button span { background: url('../img/icon_video_play1.png') no-repeat; }
 }
 @media only screen and (max-width:320px){
-    .logo { left: 2%; }
+    .indexAd { font-size: 50px; line-height: 50px; margin-top: -90px }
+    .logo { left: 3%; }
+    .indexAd { left: 3%; }
+    .indexMapLinks a { margin-right: 5px; font-size: 12px; }
+    .indexMapLinks { right: 1%; }
+    .company { width: 100%; margin-top: 150px; }
+    .company p { font-size: 16px; }
+    .plus { margin-top: 150px; }
+    .triangle p { width: 100%; }
+    .f72 { font-size: 30px; }
+    .showcaseImg a { margin: 0 1px 50px 1px; }
+    .trusted { margin-bottom: 300px; }
+    .hotspots a { display: inline-block; margin-bottom: 10px; }
+    .f36 { font-size: 28px; }
+    .main_heading { font-size: 40px; line-height: 40px; }
 }
 

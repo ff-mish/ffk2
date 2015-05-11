@@ -343,7 +343,9 @@ easily in the skin designer. http://designer.videojs.com/
     top: 50%;
     margin:-30px 0 0 -30px;
     position: absolute;
-    background: url('../img/icon_video_play.png') no-repeat;width:60px;height: 60px;
+    background: url('../img/icon_video_play.png') no-repeat;
+    width: 141px;
+    height: 141px;
 }
 .vjs-big-play-button:hover span {
     opacity: 0.7;

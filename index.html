@@ -3,11 +3,13 @@
 
 <head>
 	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content=" initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
 
 	<link rel="stylesheet" href="css/style.css" />
-	<link rel="stylesheet" href="css/responsive.css" />
 	<link href="css/video-js.css" rel="stylesheet" />
+	<link rel="stylesheet" href="css/responsive.css" />
 
 	<script src="js/jquery.1.11.2.js"></script>
 	<script src="js/video.js"></script>
@@ -47,8 +49,8 @@
                 st=$win.scrollTop();
                 if(st<height && st>1){
                     $header.fadeOut();
-                    $('.indexAd').css('margin-top', st*0.3-141);
-                    $('.indexMapImg').css('margin-top', st*0.7);
+                    $('.indexAd').css('margin-top', -(st*0.3+141) );
+                    $('.indexMapImg').css('margin-top', -st*0.5 );
                 }else{
                     $header.fadeIn();
                 }
