@@ -124,6 +124,24 @@
 	    	TweenMax.from($('#contact'), .5, {css:{opacity:0}}),0,-100)
 	    	;
 
+	    	myBrowser();
+
+	    	$('.indexMapLinks1').click(function (){
+	    		var b = $('.companys').offset().top;
+	    		$('html,body').animate({scrollTop:b},500);
+	    	});
+	    	$('.indexMapLinks2').click(function (){
+	    		var b = $('#fade4').offset().top;
+	    		$('html,body').animate({scrollTop:b},500);
+	    	});
+	    	$('.indexMapLinks3').click(function (){
+	    		var b = $('#showcase').offset().top;
+	    		$('html,body').animate({scrollTop:b},500);
+	    	});
+	    	$('.indexMapLinks4').click(function (){
+	    		var b = $('#contact').offset().top;
+	    		$('html,body').animate({scrollTop:b},500);
+	    	});
 
 		});
 
@@ -172,10 +190,10 @@
 				<img  src="img/logo.png" />
 			</div>
 			<div class="indexMapLinks">
-				<a href="#indexCon" class="indexMapLinks1">concept</a>
-				<a href="#subheading" class="indexMapLinks2">principes</a>
-				<a href="#showcase" class="indexMapLinks3">cases</a>
-				<a href="#contact" class="indexMapLinks4">contact</a>
+				<a href="javascript:void(0);" class="indexMapLinks1">concept</a>
+				<a href="javascript:void(0);" class="indexMapLinks2">principes</a>
+				<a href="javascript:void(0);" class="indexMapLinks3">cases</a>
+				<a href="javascript:void(0);" class="indexMapLinks4">contact</a>
 			</div>
 		</nav>
 		<p class="indexAd">worldwide <br /> digital centric <br /> event</p>
@@ -333,6 +351,9 @@ videojs("myvideo", { "controls": true, "autoplay": false, "preload": "auto", "po
 	.on('play',function(){
 		$('.tvp_overlay_poster').hide();
 	})
+	.on('pause',function(){
+		$('.tvp_overlay_poster').show();
+	})
 	.on('ended', function (){
 			$('.tvp_overlay_poster').show();
 		 	$('.vjs-poster').show();
@@ -381,6 +402,7 @@ function browserRedirect() {
     // document.writeln("您的浏览设备为：");
     if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
         //console.log("phone");
+        $('.indexMapImg,.indexAd').css({position:'absolute'});
         return true;
     } else {
         //console.log("pc");
@@ -405,9 +427,17 @@ $(function () {
         //禁视差
 	};
 });
-
 //判断移动端横屏
 
+//----------------------------- 判断浏览器 -------------------------  
+	function myBrowser(){  
+		var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串  
+		var isSafari = userAgent.indexOf("Safari") > -1 && userAgent.indexOf("Chrome") < 1 ; //判断是否Safari     
+		if(isSafari){
+			$('.contact_links a').css('font-weight', '300');
+		}  
+	} 
+//myBrowser() end  
 
 </script>
 
