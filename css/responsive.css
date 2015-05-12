@@ -47,6 +47,7 @@
     .f72 { font-size: 60px; }
     .trustedLogo { width: 100%; margin: 0; }
     .trustedLogo img { margin: 0; }
+    .main_heading { font-size: 40px; line-height: 40px; }
 }
 @media only screen and (max-width:480px){
     .indexMapLinks a { margin-right: 5px; font-size: 12px; }

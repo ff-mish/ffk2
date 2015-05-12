@@ -393,6 +393,16 @@ $(function () {
 		init();
 		$('.indexMapLinks').css('opacity','0');
 		$('.circleWrap a').css( {'width':'4px', 'height':'4px'} );
+		//禁视差
+		var $win=$(window),$header=$(".indexMapLinks"),height=$win.height(),st;
+        $win.scroll(function(e){
+            st=$win.scrollTop();
+            if(st<height && st>1){
+                $('.indexAd').css('margin-top', -90 );
+                $('.indexMapImg').css('margin-top', 0 );
+            }
+        });
+        //禁视差
 	};
 });
 
