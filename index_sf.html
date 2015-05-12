@@ -16,8 +16,11 @@
 
 	<script src="js/TweenMax.min.js"></script>
 	<script src="js/jquery.superscrollorama.js"></script>
-	<script>	
+	<script>
+			
 		$(function () {
+
+			//loading
 			var percent=0,
 				$sall=$(".s_all"),
 				$loadding=$("#loadding");
@@ -26,8 +29,7 @@
 				if(percent>100){
 					percent=100;
 					$loadding.width(percent+"%");
-					$loadding.fadeOut(300);
-					$sall.css('opacity', 1);
+					$sall.fadeIn(300);
 					return false;
 				};
 				console.log(percent);
@@ -35,31 +37,26 @@
 				setTimeout(loadding,500);
 			}
 			loadding();
+			//loading
 
-			//mapCircle
-			function mapCircle(){
-				var $mapW = $('.bigMap').width();
-				var $mapH = $('.bigMap').height();
-				console.log($mapW+' '+$mapH);
-				$('.circle1').css({ "left": (445 / 1600) * $mapW, "top": (275 / 876) * $mapH });
-				$('.circle2').css({ "left": (785 / 1600) * $mapW, "top": (255 / 876) * $mapH });
-				$('.circle3').css({ "left": (1113 / 1600) * $mapW, "top": (383 / 876) * $mapH });
-				$('.circle4').css({ "left": (1173 / 1600) * $mapW, "top": (313 / 876) * $mapH });
-				$('.circle5').css({ "left": (1180 / 1600) * $mapW, "top": (330 / 876) * $mapH });
-				$('.circle6').css({ "left": (1300 / 1600) * $mapW, "top": (275 / 876) * $mapH });
-				$('.circle7').css({ "left": (1330 / 1600) * $mapW, "top": (290 / 876) * $mapH });
-			}
+
 			$('.bigMap img').load(function(){
 				mapCircle();
 			});
-			
 
 			$('.hotspots').tabSwitch();
+		
+			var $circleL = $('.circle1').offset().left;
+			var $circleT = $('.circle1').offset().top;
 
+			//console.log($('.bigMap').height());
+			//mapCircle();
+			$('.indexMap').css('height', $(window).height() + 'px');
 			$(window).resize(function(){
 				mapCircle();
 				
 				$('.indexMap').css('height', $(window).height() + 'px');
+				$('#loadding').css('height', $(window).height() + 'px');
 			});
 
 			$('#slideAlink').click(function (){
@@ -91,7 +88,7 @@
             });
             //animate
 
-            //fI
+            //动态加载
 			var controller = $.superscrollorama({
 				triggerAtCenter: false,
 				playoutAnimations: true
@@ -123,9 +120,12 @@
 	    	.addTween('#fade12', 
 	    	TweenMax.from($('#contact'), .5, {css:{opacity:0}}),0,-100)
 	    	;
-
+	    	//动态加载
 
 		});
+		
+	
+		//mapCircle
 
 		//mapHover
 		$.fn.tabSwitch=function ()
@@ -146,6 +146,20 @@
 				aBtn.eq($(this).index()).animate({ width:'16px', height:'16px' });
 			});				
 		};
+
+		//mapCircle
+		function mapCircle(){
+			var $mapW = $('.bigMap').width();
+			var $mapH = $('.bigMap').height();
+			console.log($mapW+' '+$mapH);
+			$('.circle1').css({ "left": (445 / 1600) * $mapW, "top": (275 / 876) * $mapH });
+			$('.circle2').css({ "left": (785 / 1600) * $mapW, "top": (255 / 876) * $mapH });
+			$('.circle3').css({ "left": (1113 / 1600) * $mapW, "top": (383 / 876) * $mapH });
+			$('.circle4').css({ "left": (1173 / 1600) * $mapW, "top": (313 / 876) * $mapH });
+			$('.circle5').css({ "left": (1180 / 1600) * $mapW, "top": (330 / 876) * $mapH });
+			$('.circle6').css({ "left": (1300 / 1600) * $mapW, "top": (275 / 876) * $mapH });
+			$('.circle7').css({ "left": (1330 / 1600) * $mapW, "top": (290 / 876) * $mapH });
+		}
 
 	</script>
 
