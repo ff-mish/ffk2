@@ -101,7 +101,7 @@
 	    	.addTween('#fade1', 
 	    	TweenMax.from($('#fade2'), .5, {css:{opacity:0}}),0,-100)
 	    	.addTween('#fade2', 
-	    	TweenMax.from($('#fade3'), .5, {css:{opacity:0}}),0,-100)
+	    	TweenMax.from($('#fade3'), .5, {css:{opacity:0}}),0,-300)
 	    	.addTween('#fade3', 
 	    	TweenMax.from($('#fade4'), .5, {css:{opacity:0}}),0,-100)
 	    	.addTween('#fade4', 
@@ -373,7 +373,7 @@ function browserRedirect() {
 $(function () {
 	if(browserRedirect()){
 		init();
-		$('.indexMapLinks').css('display','none');
+		$('.indexMapLinks').css('opacity','0');
 	};
 });
 
