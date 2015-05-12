@@ -137,6 +137,10 @@
 				$(this).stop().animate({ width:'16px', height:'16px' });
 				aDiv.removeClass('current');
 				aDiv.eq($(this).index()).addClass('current');
+			});
+			aBtn.mouseout(function (){
+				aBtn.css( {'width':'8px', 'height':'8px'} );
+				aDiv.removeClass('current');
 			});		
 			aDiv.mouseover(function (){
 				aDiv.removeClass('current');
@@ -144,6 +148,10 @@
 				aBtn.css( {'width':'8px', 'height':'8px'} );
 				aBtn.stop();
 				aBtn.eq($(this).index()).animate({ width:'16px', height:'16px' });
+			});	
+			aDiv.mouseout(function (){
+				aDiv.removeClass('current');
+				aBtn.css( {'width':'8px', 'height':'8px'} );
 			});				
 		};
 
@@ -248,8 +256,8 @@
 					<a class="circle1" href="javascript:;"></a>
 					<a class="circle2" href="javascript:;"></a>
 					<a class="circle3" href="javascript:;"></a>
-					<a class="circle4" href="javascript:;"></a>
 					<a class="circle5" href="javascript:;"></a>
+					<a class="circle4" href="javascript:;"></a>				
 					<a class="circle6" href="javascript:;"></a>
 					<a class="circle7" href="javascript:;"></a>
 				</div>
@@ -279,8 +287,13 @@
 			<div class="page1video">
 				<video id="myvideo" class="video-js vjs-default-skin vjs-big-play-centered" width="auto">
 					<source src="video/3.mp4" type="video/mp4" />
-				</video>		
+				</video>	
+				<div class="tvp_overlay_poster">  
+					<img class="tvp_poster_img" src="img/page1video.jpg" /> 
+				</div>	
 			</div>
+
+			
 		</div>
 
 		<div class="contact ac" id="contact">
@@ -317,10 +330,15 @@ $(function () {
 	}).trigger('resize');
 });
 videojs("myvideo", { "controls": true, "autoplay": false, "preload": "auto", "poster": "img/page1video.jpg" })
+	.on('play',function(){
+		$('.tvp_overlay_poster').hide();
+	})
 	.on('ended', function (){
-	 		$('.vjs-poster').show();
+			$('.tvp_overlay_poster').show();
+		 	$('.vjs-poster').show();
 		}
 	);
+$('.tvp_overlay_poster').appendTo('#myvideo');
 
 //判断移动端横屏
 
@@ -374,6 +392,7 @@ $(function () {
 	if(browserRedirect()){
 		init();
 		$('.indexMapLinks').css('opacity','0');
+		$('.circleWrap a').css( {'width':'4px', 'height':'4px'} );
 	};
 });
 
