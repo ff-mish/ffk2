@@ -133,6 +133,7 @@ $.fn.tabSwitch=function ()
     var aBtn = this.find('.circleWrap a');
     var aDiv=this.find('.circleLinks a');
     aBtn.mouseover(function (){
+        // marginleft/top 圆心居中执行
         aBtn.css( {'width':'8px', 'height':'8px','marginTop':'0px','marginLeft':'0px'} );
         $(this).stop().animate({ width:'16px', height:'16px','marginTop':'-4px','marginLeft':'-4px'});
         aDiv.removeClass('current');
@@ -158,11 +159,13 @@ $.fn.tabSwitch=function ()
 
 $(function () {
     $(window).resize(function () {
-        var height = $(window).width()*1.0 / (1280/720);
+        var height = $(window).width()*1.0 / (1600/726);
         $('#myvideo').height(height);
+        //contact模块一屏
         var contactHeight=$(window).height()-parseInt($('.video').css('marginBottom'));
-        $('.contact').height(contactHeight>300?contactHeight:300)
+        $('.contact').height(contactHeight>300?contactHeight:300);
         $('.contacttitle').css({marginTop:(contactHeight-300)/2});
+
     }).trigger('resize');
 });
 videojs("myvideo", { "controls": true, "autoplay": false, "preload": "auto", "poster": "img/page1video.jpg" })
@@ -223,6 +226,13 @@ function browserRedirect() {
         $('.indexMapImg,.indexAd').css({position:'absolute'});
         $('.circleLinks a').unbind();
         $('.circleWrap a').unbind();
+0
+        //contact模块一屏
+        var contactHeight=$(window).height();
+        //$('.contact').height(contactHeight>530?contactHeight:530);
+        $('.contact').height(contactHeight);
+        $('.contacttitle').css({marginTop:(contactHeight-360)/2});
+
         return true;
     } else {
         //console.log("pc");
