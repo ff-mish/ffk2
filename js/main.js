@@ -45,7 +45,7 @@ $(function () {
     });
 
     $('#slideAlink').click(function (){
-        $('body').stop().animate({
+        $('html,body').stop().animate({
             scrollTop:  $('.indexMap').height()
         }, 500);
     });
