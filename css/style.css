@@ -88,7 +88,7 @@ line-height: 60px; text-transform: uppercase; }
 	color: #fff; }
 .indexMapLinks { position: fixed; z-index: 9; right: 4%; top: 92px; }
 .indexMapLinks a { float: left; margin-right: 155px; font-size: 14px;
-	color: #585858; text-transform: uppercase; }
+	color: #585858; text-transform: uppercase;  font-weight: bold }
 .indexMapLinks.fcActive a{color: #ffffff;}
 
 .circleWrap a { position: absolute; z-index: 2; width: 8px; height: 8px; background-color: #fff; border-radius: 50%; 
@@ -125,6 +125,6 @@ line-height: 60px; text-transform: uppercase; }
 	background-color: #000; }
 .tvp_poster_img { display: block; width: 100%; }
 .placeholderDiv { height: 120px; visibility: hidden; }
-.indexMapLinks a:hover { font-weight: bold }
+.indexMapLinks a:hover {}
 
 

@@ -229,10 +229,13 @@ function browserRedirect() {
         $('.circleWrap a').unbind();
 0
         //contact模块一屏
-        var contactHeight=$(window).height();
-        //$('.contact').height(contactHeight>530?contactHeight:530);
-        $('.contact').height(contactHeight);
-        $('.contacttitle').css({marginTop:(contactHeight-360)/2});
+
+        $(window).resize(function () {
+            var contactHeight=$(window).height();
+            //$('.contact').height(contactHeight>530?contactHeight:530);
+            $('.contact').height(contactHeight);
+            $('.contacttitle').css({marginTop:(contactHeight-360)/2});
+        }).trigger('resize');
 
         return true;
     } else {
