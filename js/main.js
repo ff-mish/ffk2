@@ -254,7 +254,7 @@ $(function () {
         $win.scroll(function(e){
             st=$win.scrollTop();
             if(st<height && st>1){
-                $('.indexAd').css('margin-top', -90 );
+                $('.indexAd').css('margin-top', -70 );
                 $('.indexMapImg').css('margin-top', 0 );
             }
         });
