@@ -17,7 +17,7 @@ $(function () {
 
         $loadding.width(percent+"%");
         setTimeout(loadding,500);
-
+        var progress=0;
         $('img').each(function(){
             $(this).load(function(){
                 $loadding.width(progress+"%");
