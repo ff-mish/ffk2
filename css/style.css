@@ -82,7 +82,7 @@ line-height: 60px; text-transform: uppercase; }
 
 
 .contact { width: 90%; margin: 0 auto; }
-.contact_links { margin-bottom: 80px; }
+/*.contact_links { padding-bottom: 380px; }*/
 .contact_links a { display: inline-block; width: 344px; height: 75px; margin: 0 41px; 
 	line-height: 75px; border: 1px solid #fff; font-size: 24px; font-weight: 100; 
 	color: #fff; }

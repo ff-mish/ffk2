@@ -233,7 +233,7 @@ function browserRedirect() {
         $(window).resize(function () {
             var contactHeight=$(window).height();
             //$('.contact').height(contactHeight>530?contactHeight:530);
-            $('.contact').height(contactHeight);
+            $('.contact').height(contactHeight>440?contactHeight:440);
             $('.contacttitle').css({marginTop:(contactHeight-360)/2});
         }).trigger('resize');
 
