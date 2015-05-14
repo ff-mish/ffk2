@@ -52,7 +52,7 @@
 }
 @media only screen and (max-width:480px){
     .indexMapLinks a { margin-right: 5px; font-size: 12px; }
-    .indexAd { left: 3%; font-size: 50px; line-height: 50px; margin-top: -90px }
+    .indexAd { left: 3%; font-size: 50px; line-height: 50px; margin-top: -70px }
     .logo { left: 3%; }
     .triangle p { width: 100%; }
     .hotspots a { font-size: 12px; margin-right: 6px; }
