@@ -14,22 +14,8 @@ $(function () {
             $sall.css('opacity', 1);
             return false;
         };
-
-        //$loadding.width(percent+"%");
-        //setTimeout(loadding,500);
-        //var progress=0;
-        //$('img').each(function(){
-        //    $(this).load(function(){
-        //        $loadding.width(progress+"%");
-        //        progress=progress+100.0/imgList.length;
-        //        if(progress>=100){
-        //            percent=100;
-        //            $loadding.width(percent+"%");
-        //            $loadding.fadeOut(300);
-        //            $sall.css('opacity', 1);
-        //        }
-        //    })
-        //});
+        $loadding.width(percent+"%");
+        setTimeout(loadding,500);
     }
     loadding();
 
