@@ -123,6 +123,6 @@ line-height: 60px; text-transform: uppercase; }
 	background-color: #000; }
 .tvp_poster_img { display: block; width: 100%; }
 .placeholderDiv { height: 120px; visibility: hidden; }
-
+.indexMapLinks a:hover { font-weight: bold; }
 
 

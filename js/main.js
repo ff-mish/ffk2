@@ -58,17 +58,18 @@ $(function () {
     }
     $win.scroll(function(e){
         st=$win.scrollTop();
+
         if(st<height && st>1){
             //$header.fadeOut();
             $('.indexAd').css('margin-top', -(st*0.3+indexAdMT) );
             $('.indexMapImg').css('margin-top', -st*0.5 );
         }else{
             //$header.fadeIn();
-            if(st<height){
-                $header.removeClass('fcActive');
-            }else{
-                $header.addClass('fcActive');
-            }
+        }
+        if(st<height-92){
+            $header.removeClass('fcActive');
+        }else{
+            $header.addClass('fcActive');
         }
     });
     //animate
@@ -93,7 +94,7 @@ $(function () {
         .addTween('#fade6',
         TweenMax.from($('#fade7'), .5, {css:{opacity:0}}),0,-100)
         .addTween('#fade7',
-        TweenMax.from($('#fade8'), .5, {css:{opacity:0}}),0,-100)
+        TweenMax.from($('#fade8'), .5, {css:{opacity:0}}),0,-300)
         .addTween('#fade8',
         TweenMax.from($('#fade9'), .5, {css:{opacity:0}}),0,-300)
         .addTween('#fade9',
