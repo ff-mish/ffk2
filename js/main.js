@@ -2,7 +2,6 @@
  * Created by aaron.jin on 15/5/13.
  */
 $(function () {
-
     var percent = 0,
         $sall = $(".s_all"),
         $loadding = $("#loadding");
@@ -66,6 +65,7 @@ $(function () {
             $loadding.stop().animate({width: preload.progress * 100 + "%"}, 500, function () {
                 $(this).fadeOut(300);
                 $sall.css('opacity', 1);
+                $('body').css({background:'#fff'});
             });
         }
 
@@ -111,7 +111,6 @@ $(function () {
     }
     $win.scroll(function (e) {
         st = $win.scrollTop();
-
         if (st < height && st > 1) {
             //$header.fadeOut();
             $('.indexAd').css('margin-top', -(st * 0.3 + indexAdMT));
@@ -121,8 +120,10 @@ $(function () {
         }
         if (st < height - 92) {
             $header.removeClass('fcActive');
+            $('body').css({background:'#fff'});
         } else {
             $header.addClass('fcActive');
+            $('body').css({background:'#000'});
         }
     });
     //animate
