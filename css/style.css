@@ -96,11 +96,12 @@ line-height: 60px; text-transform: uppercase; }
 	-moz-border-radius: 50%; -webkit-border-radius: 50%; }
 .circleWrap a.circle1 { left: 445px; top: 275px; }
 .circleWrap a.circle2 { left: 785px; top: 255px; }
-.circleWrap a.circle3 { left: 1113px; top: 383px; }
-.circleWrap a.circle4 { left: 1173px; top: 313px; }
-.circleWrap a.circle5 { left: 1180px; top: 330px; }
-.circleWrap a.circle6 { left: 1300px; top: 275px; }
-.circleWrap a.circle7 { left: 1330px; top: 290px; }
+
+.circleWrap a.circle3 { left: 1200px; top: 460px; }
+.circleWrap a.circle4 { left: 1260px; top: 400px; }
+.circleWrap a.circle5 { left: 1208px; top: 355px; }
+.circleWrap a.circle6 { left: 1286px; top: 362px; }
+.circleWrap a.circle7 { left: 1345px; top: 358px; }
 
 .content { background-attachment: fixed; background-repeat: no-repeat;
 	position: relative; }

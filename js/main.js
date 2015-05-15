@@ -77,11 +77,11 @@ $(function () {
         var $mapH = $('.bigMap').height();
         $('.circle1').css({"left": (445 / 1600) * $mapW, "top": (275 / 876) * $mapH});
         $('.circle2').css({"left": (785 / 1600) * $mapW, "top": (255 / 876) * $mapH});
-        $('.circle3').css({"left": (1113 / 1600) * $mapW, "top": (383 / 876) * $mapH});
-        $('.circle4').css({"left": (1173 / 1600) * $mapW, "top": (313 / 876) * $mapH});
-        $('.circle5').css({"left": (1180 / 1600) * $mapW, "top": (330 / 876) * $mapH});
-        $('.circle6').css({"left": (1300 / 1600) * $mapW, "top": (275 / 876) * $mapH});
-        $('.circle7').css({"left": (1330 / 1600) * $mapW, "top": (290 / 876) * $mapH});
+        $('.circle3').css({"left": (1200 / 1600) * $mapW, "top": (460 / 876) * $mapH});
+        $('.circle5').css({"left": (1260 / 1600) * $mapW, "top": (400 / 876) * $mapH});
+        $('.circle4').css({"left": (1208 / 1600) * $mapW, "top": (355 / 876) * $mapH});
+        $('.circle6').css({"left": (1286 / 1600) * $mapW, "top": (362 / 876) * $mapH});
+        $('.circle7').css({"left": (1345 / 1600) * $mapW, "top": (358 / 876) * $mapH});
     }
 
     $('.bigMap img').load(function () {
