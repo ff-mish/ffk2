@@ -185,8 +185,8 @@ $(function () {
         var height = $(window).width() * 1.0 / (1600 / 726);
         $('#myvideo').height(height);
         //contact模块一屏
-        var contactHeight = $(window).height() - parseInt($('.video').css('marginBottom'));
-        $('.contact').height(contactHeight > 300 ? contactHeight : 300);
+        var contactHeight = $(window).height();
+        $('.contact').height(contactHeight > 600 ? contactHeight : 600);
         $('.contacttitle').css({marginTop: (contactHeight - 300) / 2});
 
     }).trigger('resize');
