@@ -77,8 +77,19 @@ line-height: 60px; text-transform: uppercase; }
 .trustedLogo { width: 759px; margin: 0 auto; }
 .trustedLogo img { display: inline-block; margin: 0 76px; }
 .showcase { width: 90%; margin: 0 auto 207px auto; }
-.showcaseImg a { display: inline-block; width: 24%; margin: 0 4px; color: #fff; font-size: 18px; }
-.showcaseImg img { width: 100%; margin-bottom: 20px; }
+.showcaseImg a { display: inline-block; width: 24%; margin: 0 4px 20px 0; color: #fff;
+    font-size: 18px; }
+.showcaseImg a img { display: inline-block; width: 100%; }
+.showcaseImg a span { display: inline-block; width: 100%;
+    height: 100%; background-size: 100%; background-repeat: no-repeat; }
+.showcaseImg a.showcase1 span { background-image: url("../img/showcase1.jpg"); }
+.showcaseImg a.showcase2 span { background-image: url("../img/showcase2.jpg"); }
+.showcaseImg a.showcase3 span { background-image: url("../img/showcase3.jpg"); }
+.showcaseImg a.showcase4 span { background-image: url("../img/showcase4.jpg"); }
+.showcaseImg a.showcase1:hover span { background-image: url("../img/showcase5.jpg"); }
+.showcaseImg a.showcase2:hover span { background-image: url("../img/showcase6.jpg"); }
+.showcaseImg a.showcase3:hover span { background-image: url("../img/showcase7.jpg"); }
+.showcaseImg a.showcase4:hover span { background-image: url("../img/showcase8.jpg"); }
 .video { margin-bottom: 200px; }
 
 
