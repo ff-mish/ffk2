@@ -62,12 +62,14 @@ $(function () {
             console.log(event );
             console.log(preload.progress );
             //$("#mainProgress > .progress").width(preload.progress * $("#mainProgress").width());
-            $loadding.width(preload.progress*100+"%");
+            $loadding.stop().animate({width:preload.progress*100+"%"},50);
         }
         function handleComplete(event) {
             console.log('complete');
-            $loadding.fadeOut(300);
-            $sall.css('opacity', 1);
+            $loadding.stop().animate({width:preload.progress*100+"%"},500,function(){
+                $(this).fadeOut(300);
+                $sall.css('opacity', 1);
+            });
         }
 
     }
