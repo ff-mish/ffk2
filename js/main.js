@@ -59,13 +59,9 @@ $(function () {
         preload.loadManifest(manifest, true, "img/");
 
         function handleOverallProgress(event) {
-            console.log(event );
-            console.log(preload.progress );
-            //$("#mainProgress > .progress").width(preload.progress * $("#mainProgress").width());
-            $loadding.stop().animate({width:preload.progress*100+"%"},50);
+            $loadding.stop().animate({width:preload.progress*100+"%"},500);
         }
         function handleComplete(event) {
-            console.log('complete');
             $loadding.stop().animate({width:preload.progress*100+"%"},500,function(){
                 $(this).fadeOut(300);
                 $sall.css('opacity', 1);
