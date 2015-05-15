@@ -2,22 +2,75 @@
  * Created by aaron.jin on 15/5/13.
  */
 $(function () {
+
     var percent=0,
         $sall=$(".s_all"),
         $loadding=$("#loadding");
-    function loadding(){
-        percent=percent+Math.floor(Math.random()*20);
-        if(percent>100){
-            percent=100;
-            $loadding.width(percent+"%");
+    //function loadding(){
+    //    Old loading
+    //    percent=percent+Math.floor(Math.random()*20);
+    //    if(percent>100){
+    //        percent=100;
+    //        $loadding.width(percent+"%");
+    //        $loadding.fadeOut(300);
+    //        $sall.css('opacity', 1);
+    //        return false;
+    //    };
+    //    $loadding.width(percent+"%");
+    //    setTimeout(loadding,500);
+    //}
+    //loadding();
+
+    var preload;
+    init();
+    function init() {
+        // Create a new queue.
+        preload = new createjs.LoadQueue(true, "img/");
+
+        // Use this instead to favor xhr loading
+        //preload = new createjs.LoadQueue(true, "assets/");
+
+        manifest =["aaa.png",
+            "indeximg_polygon.jpg",
+            "showcase3.jpg",
+            "arrow.png",
+            "indeximg_polygon1.jpg",
+            "showcase4.jpg",
+            "bigMap.jpg",
+            "indeximg_triangle.jpg",
+            "slider_line.gif",
+            "ff.jpg",
+            "k2.jpg",
+            "trustedLogo1.jpg",
+            "icon_video_play.png",
+            "logo.png",
+            "trustedLogo2.jpg",
+            "icon_video_play1.png",
+            "page1video.jpg",
+            "video_mute.png",
+            "indexImg_FFK2.jpg",
+            "showcase1.jpg",
+            "video_pause.png",
+            "indexMap.gif",
+            "showcase2.jpg"
+        ];
+        preload.on("progress", handleOverallProgress);
+        preload.on("complete", handleComplete);
+        preload.loadManifest(manifest, true, "img/");
+
+        function handleOverallProgress(event) {
+            console.log(event );
+            console.log(preload.progress );
+            //$("#mainProgress > .progress").width(preload.progress * $("#mainProgress").width());
+            $loadding.width(preload.progress*100+"%");
+        }
+        function handleComplete(event) {
+            console.log('complete');
             $loadding.fadeOut(300);
             $sall.css('opacity', 1);
-            return false;
-        };
-        $loadding.width(percent+"%");
-        setTimeout(loadding,500);
+        }
+
     }
-    loadding();
 
     //mapCircle
     function mapCircle(){

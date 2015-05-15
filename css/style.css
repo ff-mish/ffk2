@@ -5,7 +5,7 @@
 
 /* Reset
 ================================================================================================= */
-body{color:#000;background:#fff;font-size:12px;}
+body{color:#000;background:#000;font-size:12px;}
 body{font-family:"Helvetica Neue","Microsoft YaHei",arial,SimHei,sans-serif;padding:1px 0 0;}
 h1,h2,h3{font-size:100%;}
 body,h1,h2,h3,h4,ul,li,p,img{margin:0;padding:0;border:0;}
@@ -118,7 +118,7 @@ line-height: 60px; text-transform: uppercase; }
     -moz-transition: opacity .20s linear; transition: opacity .20s linear;}
 
 .s_all { opacity: 0; background-color: #000; }
-#loadding{ position: fixed; z-index: 99999; height: 100%; width: 0px; top: 0; left: 0; background: #000; }
+#loadding{ position: fixed; z-index: 99999; height: 100%; width: 0px; top: 0; left: 0; background: #fff; }
 
 .tvp_overlay_poster { position: absolute; z-index: 9; left: 0; top: 0; 
 	width: 100%; height: 100%; overflow: hidden; text-align: center;
