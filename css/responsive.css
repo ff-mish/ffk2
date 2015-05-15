@@ -35,8 +35,7 @@
     .hotspots a { margin-right: 30px; }
     .trustedLogo { width: 460px; }
     .trustedLogo img { margin: 0; }
-    .contact_links a { display: block; width: 99%; height: auto; line-height: inherit; 
-        padding: 25px 0; margin: 20px 0 0 0; }
+    .contact_links a { display: block; width: 99%; line-height: inherit; margin: 20px 0 0 0; }
     .equal { margin: 182px auto 102px auto; }
     .trusted { margin-bottom: 0; }
     .mb105 {margin-bottom: 20px; }
