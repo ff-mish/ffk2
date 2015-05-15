@@ -33,6 +33,7 @@ a{text-decoration:none}
 .lh18 { line-height: 18px; }
 .mb105 { margin-bottom: 105px; }
 h1,h2 { text-transform: uppercase; }
+.tran-u{ text-transform: uppercase; }
 
 /* Page Used 
 =================================================================================  */
@@ -40,10 +41,10 @@ h1,h2 { text-transform: uppercase; }
 .indexMapImg { position: fixed; top: 0; right: 0; z-index: 2; }
 .logo { position: absolute; z-index: 5; left: 10%; top: 74px; }
 .logo img { display: block; }
-.indexAd { position: fixed; z-index: 2; left: 10%; top: 50%; margin-top: -141px; color: #282828; 
+.indexAd { position: fixed; z-index: 2; left: 10%; top: 50%; margin-top: -141px; color: #282828;
 	font-size: 106px; font-weight: bold; line-height: 94px; }
 .slideDownTip { position: absolute; z-index: 9; left: 50%; bottom: 5%; margin-left: -30px; }
-.slideDownTip a { display: block; width: 59px; height: 22px; 
+.slideDownTip a { display: block; width: 59px; height: 22px;
 	background: url("../img/arrow.png") no-repeat; }
 .indexCon { position: relative; z-index: 3; background-color: #000; color: #fff; }
 .companys { width: 90%; margin: 0 auto; }
@@ -59,10 +60,10 @@ h1,h2 { text-transform: uppercase; }
 .plus { margin: 575px 165px 0 165px; font-size: 36px; font-weight: bold; }
 .equal { width: 90%; margin: 232px auto 152px auto; font-size: 36px; font-weight: bold; }
 .indexImg { width: 90%; margin: 0 auto 115px auto; }
-.indexImg img { width: 100%; height: 100%; }
-.main_heading { width: 90%; margin: 0 auto 130px auto; font-size: 60px; font-weight: bold; 
+.indexImg img { width: 100%;}
+.main_heading { width: 90%; margin: 0 auto 130px auto; font-size: 60px; font-weight: bold;
 line-height: 60px; }
-.subheading { width: 90%; margin: 0 auto; font-size: 24px; font-weight: bold; 
+.subheading { width: 90%; margin: 0 auto; font-size: 24px; font-weight: bold;
 line-height: 60px; text-transform: uppercase; }
 .triangle { width: 90%; margin: 0 auto 138px auto; }
 .triangle img { display: block; margin: 0 auto; }
@@ -91,22 +92,22 @@ line-height: 60px; text-transform: uppercase; }
 	color: #585858; text-transform: uppercase;  font-weight: bold }
 .indexMapLinks.fcActive a{color: #ffffff;}
 
-.circleWrap a { position: absolute; z-index: 2; width: 8px; height: 8px; background-color: #fff; border-radius: 50%; 
+.circleWrap a { position: absolute; z-index: 2; width: 8px; height: 8px; background-color: #fff; border-radius: 50%;
 	-moz-border-radius: 50%; -webkit-border-radius: 50%; }
-.circleWrap a.circle1 { left: 445px; top: 275px; } 
-.circleWrap a.circle2 { left: 785px; top: 255px; } 
-.circleWrap a.circle3 { left: 1113px; top: 383px; } 
-.circleWrap a.circle4 { left: 1173px; top: 313px; }  
-.circleWrap a.circle5 { left: 1180px; top: 330px; } 
-.circleWrap a.circle6 { left: 1300px; top: 275px; } 
-.circleWrap a.circle7 { left: 1330px; top: 290px; } 
+.circleWrap a.circle1 { left: 445px; top: 275px; }
+.circleWrap a.circle2 { left: 785px; top: 255px; }
+.circleWrap a.circle3 { left: 1113px; top: 383px; }
+.circleWrap a.circle4 { left: 1173px; top: 313px; }
+.circleWrap a.circle5 { left: 1180px; top: 330px; }
+.circleWrap a.circle6 { left: 1300px; top: 275px; }
+.circleWrap a.circle7 { left: 1330px; top: 290px; }
 
 .content { background-attachment: fixed; background-repeat: no-repeat;
 	position: relative; }
-.mod-orient-layer { display: none; position: fixed; height: 100%; 
-	width: 100%; left: 0; top: 0; right: 0; bottom: 0; 
+.mod-orient-layer { display: none; position: fixed; height: 100%;
+	width: 100%; left: 0; top: 0; right: 0; bottom: 0;
 	background: #000; z-index: 9997 }
-.mod-orient-layer__content { position: absolute; width: 100%; 
+.mod-orient-layer__content { position: absolute; width: 100%;
 	top: 45%; margin-top: -75px; text-align: center }
 .mod-orient-layer__icon-orient { display: inline-block;
 	width: 67px; height: 109px; background-image:
@@ -120,11 +121,12 @@ line-height: 60px; text-transform: uppercase; }
 .s_all { opacity: 0; background-color: #000; }
 #loadding{ position: fixed; z-index: 99999; height: 100%; width: 0px; top: 0; left: 0; background: #fff; }
 
-.tvp_overlay_poster { position: absolute; z-index: 9; left: 0; top: 0; 
+.tvp_overlay_poster { position: absolute; z-index: 9; left: 0; top: 0;
 	width: 100%; height: 100%; overflow: hidden; text-align: center;
 	background-color: #000; }
 .tvp_poster_img { display: block; width: 100%; }
 .placeholderDiv { height: 120px; visibility: hidden; }
+.indexMapLinks a:hover,.hotspots a.current,.circleLinks a:hover {opacity: 1; color:#0600ff;}
 
 /* 按钮动画 */
 .transition-wrap { overflow: hidden;
