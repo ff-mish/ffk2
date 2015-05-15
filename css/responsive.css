@@ -1,5 +1,7 @@
 
-
+@media only screen and (min-width:1600px){
+    .indexImg { width: 640px; }
+}
 
 @media only screen and (max-width:1450px){
     .contact_links a { width: 30%; margin: 0 2px; }
@@ -21,6 +23,7 @@
 
 @media only screen and (max-width:800px){
     .indexMapLinks a { margin-right: 50px; }
+    .indexMapImg{right: auto;left: 25%;}
     .indexAd { font-size: 90px; }
     .companys_inner { width: 100%; margin: 0; }
     .company { float: none; margin: 200px auto 0 auto; }
@@ -37,6 +40,10 @@
     .equal { margin: 182px auto 102px auto; }
     .trusted { margin-bottom: 0; }
     .mb105 {margin-bottom: 20px; }
+    .indexImg {
+        width: 90%;
+        margin: 0 auto 115px auto;
+    }
 }
 @media only screen and (max-width:700px){
     .indexMapLinks a { margin-right: 40px; }

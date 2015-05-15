@@ -59,7 +59,7 @@ h1,h2 { text-transform: uppercase; }
 .btn_website:hover { border-color: #0600ff; background-color: #0600ff; color: #000; }
 .plus { margin: 575px 165px 0 165px; font-size: 36px; font-weight: bold; }
 .equal { width: 90%; margin: 232px auto 152px auto; font-size: 36px; font-weight: bold; }
-.indexImg { width: 90%; margin: 0 auto 115px auto; }
+.indexImg { width: 40%; margin: 0 auto 115px auto; }
 .indexImg img { width: 100%;}
 .main_heading { width: 90%; margin: 0 auto 130px auto; font-size: 60px; font-weight: bold;
 line-height: 60px; }
