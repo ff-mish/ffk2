@@ -249,7 +249,6 @@ function browserRedirect() {
         $('.indexMapImg,.indexAd').css({position: 'absolute'});
         $('.circleLinks a').unbind();
         $('.circleWrap a').unbind();
-        0
         //contact模块一屏
 
         $(window).resize(function () {
@@ -312,6 +311,8 @@ $(function () {
             }
         });
         //禁视差
+        $('.contact_links a strong').removeClass('transition-wrap');
+        $('.contact_links a div').removeClass('transition');
     }
     ;
 });
