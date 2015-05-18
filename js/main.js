@@ -51,7 +51,11 @@ $(function () {
             "showcase1.jpg",
             "video_pause.png",
             "indexMap.gif",
-            "showcase2.jpg"
+            "showcase2.jpg",
+            "showcase5.jpg",
+            "showcase6.jpg",
+            "showcase7.jpg",
+            "showcase8.jpg"
         ];
         preload.on("progress", handleOverallProgress);
         preload.on("complete", handleComplete);
