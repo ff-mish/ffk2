@@ -8,7 +8,10 @@
     .indexMapLinks { right: 3%; }
     .indexMapLinks a { margin-right: 100px; }
 }
-@media only screen and (max-width:1150px){ 
+@media only screen and (max-width:1250px){
+    .plus { margin: 575px 120px 0 120px; }
+}
+@media only screen and (max-width:1150px){
      .plus { margin: 575px 100px 0 100px; }
      .showcaseImg a { margin: 0 2px; }
      .indexMapLinks { right: 2%; }
@@ -20,8 +23,6 @@
     .plus { margin: 575px 20px 0 20px; }
     .indexMapLinks a { margin-right: 80px; }
 }
-
-
 @media only screen and (max-width:800px){
     .indexMapLinks a { margin-right: 50px; }
     .indexMapImg{right: auto;left: 25%;}
