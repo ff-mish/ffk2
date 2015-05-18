@@ -95,9 +95,9 @@ line-height: 60px; text-transform: uppercase; }
 
 .contact { width: 90%; margin: 0 auto; }
 /*.contact_links { padding-bottom: 380px; }*/
-.contact_links a { display: inline-block; width: 344px; height: 75px; margin: 0 41px; 
+.contact_links a { display: block; width: 344px; height: 75px; margin: 0 41px;
 	line-height: 75px; font-size: 24px; font-weight: 100;
-	color: #fff; }
+	color: #fff; float: left; }
 .indexMapLinks { position: fixed; z-index: 9; right: 4%; top: 92px; }
 .indexMapLinks a { float: left; margin-right: 155px; font-size: 14px;
 	color: #585858; text-transform: uppercase;  font-weight: bold }
