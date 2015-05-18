@@ -112,7 +112,7 @@ $(function () {
     //animate
     var $win = $(window), $header = $(".indexMapLinks"), height = $win.height(), st;
     var indexAdMT = 141;
-    if ($win.width() < 321) {
+    if ($win.width() < 1300) {
         indexAdMT = 90;
     }
     $win.scroll(function (e) {
