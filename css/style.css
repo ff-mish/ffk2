@@ -141,6 +141,7 @@ line-height: 60px; text-transform: uppercase; }
 .indexMapLinks a:hover,.hotspots a.current,.circleLinks a:hover {opacity: 1; color:#0600ff;}
 
 /* 按钮动画 */
+
 .transition-wrap { overflow: hidden;
     -webkit-animation-duration: 1s;
     -webkit-animation-name: example2;

@@ -132,7 +132,15 @@ $(function () {
     });
     //animate
 
-    //fI
+
+
+    $('.transition').hover(function (){
+        //var transH =  $(this).height();
+        $(this).stop().animate({marginTop: '-150px'});
+    },function (){
+        $(this).stop().animate({marginTop: '0px'});
+    });
+
 
 
     myBrowser();
