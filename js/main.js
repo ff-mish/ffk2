@@ -168,7 +168,7 @@ $.fn.tabSwitch = function () {
         aDiv.eq($(this).index()).addClass('current');
     });
     aBtn.mouseout(function () {
-        aBtn.css({'width': '8px', 'height': '8px', 'marginTop': '0px', 'marginLeft': '0px'});
+        aBtn.stop().css({'width': '8px', 'height': '8px', 'marginTop': '0px', 'marginLeft': '0px'});
         aDiv.removeClass('current');
     });
     aDiv.mouseover(function () {
@@ -180,7 +180,7 @@ $.fn.tabSwitch = function () {
     });
     aDiv.mouseout(function () {
         aDiv.removeClass('current');
-        aBtn.css({'width': '8px', 'height': '8px', 'marginTop': '0px', 'marginLeft': '0px'});
+        aBtn.stop().css({'width': '8px', 'height': '8px', 'marginTop': '0px', 'marginLeft': '0px'});
     });
 };
 
