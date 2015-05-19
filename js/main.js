@@ -20,61 +20,6 @@ $(function () {
     //}
     //loadding();
 
-    var preload;
-    init();
-    function init() {
-        // Create a new queue.
-        preload = new createjs.LoadQueue(true, "img/");
-
-        // Use this instead to favor xhr loading
-        //preload = new createjs.LoadQueue(true, "assets/");
-
-        manifest = ["aaa.png",
-            "indeximg_polygon.jpg",
-            "showcase3.jpg",
-            "arrow.png",
-            "indeximg_polygon1.jpg",
-            "showcase4.jpg",
-            "bigMap.jpg",
-            "indeximg_triangle.jpg",
-            "slider_line.gif",
-            "ff.jpg",
-            "k2.jpg",
-            "trustedLogo1.jpg",
-            "icon_video_play.png",
-            "logo.png",
-            "trustedLogo2.jpg",
-            "icon_video_play1.png",
-            "page1video.jpg",
-            "video_mute.png",
-            "indexImg_FFK2.jpg",
-            "showcase1.jpg",
-            "video_pause.png",
-            "indexMap.gif",
-            "showcase2.jpg",
-            "showcase5.jpg",
-            "showcase6.jpg",
-            "showcase7.jpg",
-            "showcase8.jpg"
-        ];
-        preload.on("progress", handleOverallProgress);
-        preload.on("complete", handleComplete);
-        preload.loadManifest(manifest, true, "img/");
-
-        function handleOverallProgress(event) {
-            $loadding.stop().animate({width: preload.progress * 100 + "%"}, 500);
-        }
-
-        function handleComplete(event) {
-            $loadding.stop().animate({width: preload.progress * 100 + "%"}, 500, function () {
-                $(this).fadeOut(300);
-                $sall.css('opacity', 1);
-                $('body').css({background:'#fff'});
-            });
-        }
-
-    }
-
     //mapCircle
     function mapCircle() {
         var $mapW = $('.bigMap').width();
@@ -335,56 +280,88 @@ $(function () {
 
 //----------------------------- 判断浏览器 -------------------------
 function myBrowser() {
-    var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
-    var isSafari = userAgent.indexOf("Safari") > -1 && userAgent.indexOf("Chrome") < 1; //判断是否Safari
-    var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1 && !isOpera ; //判断是否IE
-    if (isSafari) {
-        $('.contact_links a').css('font-weight', '300');
+
+    var browser=navigator.appName
+    var b_version=navigator.appVersion
+    var version=parseFloat(b_version)
+console.log(version);
+    if ((browser=="Microsoft Internet Explorer")
+        && (version<5))
+    {
+        $('.s_all').css({
+            'display':'none'
+        });
+        $('.low-browser').css({
+            'display':'block'
+        });
     }
-    if(isIE){
-        var IE5 = IE55 = IE6 = IE7 = IE8 = false;
-        var reIE = new RegExp("MSIE (+);");
-        reIE.test(userAgent);
-        var fIEVersion = parseFloat(RegExp["$1"]);
+    else
+    {
 
-        IE55 = fIEVersion == 5.5 ;
-        IE6 = fIEVersion == 6.0 ;
-        IE7 = fIEVersion == 7.0 ;
-        IE8 = fIEVersion == 8.0 ;
+        var percent = 0,
+            $sall = $(".s_all"),
+            $loadding = $("#loadding");
 
-        if(IE55){
-            $('.s_all').css({
-                'display':'none'
-            });
-            $('.low-browser').css({
-                'display':'block'
-            });
-        }
-        if(IE6){
-            $('.s_all').css({
-                'display':'none'
-            });
-            $('.low-browser').css({
-                'display':'block'
-            });
-        }
-        if(IE7){
-            $('.s_all').css({
-                'display':'none'
-            });
-            $('.low-browser').css({
-                'display':'block'
-            });
-        }
-        if(IE8){
-            $('.s_all').css({
-                'display':'none'
-            });
-            $('.low-browser').css({
-                'display':'block'
-            });
+        var preload;
+        init();
+        function init() {
+            // Create a new queue.
+            preload = new createjs.LoadQueue(true, "img/");
+
+            // Use this instead to favor xhr loading
+            //preload = new createjs.LoadQueue(true, "assets/");
+
+            manifest = ["aaa.png",
+                "indeximg_polygon.jpg",
+                "showcase3.jpg",
+                "arrow.png",
+                "indeximg_polygon1.jpg",
+                "showcase4.jpg",
+                "bigMap.jpg",
+                "indeximg_triangle.jpg",
+                "slider_line.gif",
+                "ff.jpg",
+                "k2.jpg",
+                "trustedLogo1.jpg",
+                "icon_video_play.png",
+                "logo.png",
+                "trustedLogo2.jpg",
+                "icon_video_play1.png",
+                "page1video.jpg",
+                "video_mute.png",
+                "indexImg_FFK2.jpg",
+                "showcase1.jpg",
+                "video_pause.png",
+                "indexMap.gif",
+                "showcase2.jpg",
+                "showcase5.jpg",
+                "showcase6.jpg",
+                "showcase7.jpg",
+                "showcase8.jpg"
+            ];
+            preload.on("progress", handleOverallProgress);
+            preload.on("complete", handleComplete);
+            preload.loadManifest(manifest, true, "img/");
+
+            function handleOverallProgress(event) {
+                $loadding.stop().animate({width: preload.progress * 100 + "%"}, 500);
+            }
+
+            function handleComplete(event) {
+                $loadding.stop().animate({width: preload.progress * 100 + "%"}, 500, function () {
+                    $(this).fadeOut(300);
+                    $sall.css('opacity', 1);
+                    $('body').css({background:'#fff'});
+                });
+            }
+
         }
 
+        var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
+        var isSafari = userAgent.indexOf("Safari") > -1 && userAgent.indexOf("Chrome") < 1; //判断是否Safari
+        if (isSafari) {
+            $('.contact_links a').css('font-weight', '300');
+        }
     }
 }
 //myBrowser() end
