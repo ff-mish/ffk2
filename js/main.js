@@ -281,10 +281,9 @@ $(function () {
 //----------------------------- 判断浏览器 -------------------------
 function myBrowser() {
 
-    var browser=navigator.appName
-    var b_version=navigator.appVersion
-    var version=parseFloat(b_version)
-console.log(version);
+    var browser=navigator.appName;
+    var b_version=navigator.appVersion;
+    var version=parseFloat(b_version);
     if ((browser=="Microsoft Internet Explorer")
         && (version<5))
     {
