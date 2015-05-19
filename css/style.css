@@ -73,7 +73,7 @@ line-height: 60px; text-transform: uppercase; }
 .hotspots a { color: #fff; font-size: 14px; margin-right: 35px; text-transform: uppercase; }
 .bigMap { position: relative; margin-top: 121px; }
 .bigMap img { width: 100%; height: 100%; }
-.trusted { width: 90%; margin: 0 auto 408px auto; }
+.trusted { width: 90%; margin: 0 auto 80px auto; }
 .trustedLogo { width: 759px; margin: 0 auto; }
 .trustedLogo img { display: inline-block; margin: 0 76px; }
 .showcase { width: 90%; margin: 0 auto 207px auto; }
