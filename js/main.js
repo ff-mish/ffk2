@@ -71,23 +71,21 @@ $(function () {
         }
         if (st < height - 92) {
             $header.removeClass('fcActive');
-            $('body').css({background:'#fff'});
+            $('body').css({background: '#fff'});
         } else {
             $header.addClass('fcActive');
-            $('body').css({background:'#000'});
+            $('body').css({background: '#000'});
         }
     });
     //animate
 
 
-
-    $('.transition').hover(function (){
+    $('.transition').hover(function () {
         //var transH =  $(this).height();
         $(this).stop().animate({marginTop: '-150px'});
-    },function (){
+    }, function () {
         $(this).stop().animate({marginTop: '0px'});
     });
-
 
 
     myBrowser();
@@ -148,6 +146,16 @@ $(function () {
         var contactHeight = $(window).height();
         $('.contact').height(contactHeight > 600 ? contactHeight : 600);
         $('.contacttitle').css({marginTop: (contactHeight - 300) / 2});
+
+        if($(window).width()>1450){
+            var conttactlinksWidth = 0;
+            $('.contact_links').children().each(function () {
+                conttactlinksWidth += $(this).width() + parseInt($(this).css("marginLeft")) +  parseInt($(this).css("marginRight"));
+            });
+            $('.contact_links').width(conttactlinksWidth);
+        }else{
+            $('.contact_links').width('90%');
+        }
 
     }).trigger('resize');
 });
@@ -281,21 +289,19 @@ $(function () {
 //----------------------------- 判断浏览器 -------------------------
 function myBrowser() {
 
-    var browser=navigator.appName;
-    var b_version=navigator.appVersion;
-    var version=parseFloat(b_version);
-    if ((browser=="Microsoft Internet Explorer")
-        && (version<5))
-    {
+    var browser = navigator.appName;
+    var b_version = navigator.appVersion;
+    var version = parseFloat(b_version);
+    if ((browser == "Microsoft Internet Explorer")
+        && (version < 5)) {
         $('.s_all').css({
-            'display':'none'
+            'display': 'none'
         });
         $('.low-browser').css({
-            'display':'block'
+            'display': 'block'
         });
     }
-    else
-    {
+    else {
 
         var percent = 0,
             $sall = $(".s_all"),
@@ -350,7 +356,7 @@ function myBrowser() {
                 $loadding.stop().animate({width: preload.progress * 100 + "%"}, 500, function () {
                     $(this).fadeOut(300);
                     $sall.css('opacity', 1);
-                    $('body').css({background:'#fff'});
+                    $('body').css({background: '#fff'});
                 });
             }
 
