@@ -24,13 +24,13 @@ $(function () {
     function mapCircle() {
         var $mapW = $('.bigMap').width();
         var $mapH = $('.bigMap').height();
-        $('.circle1').css({"left": (445 / 1600) * $mapW, "top": (275 / 876) * $mapH});
-        $('.circle2').css({"left": (785 / 1600) * $mapW, "top": (255 / 876) * $mapH});
-        $('.circle3').css({"left": (1200 / 1600) * $mapW, "top": (460 / 876) * $mapH});
-        $('.circle5').css({"left": (1260 / 1600) * $mapW, "top": (400 / 876) * $mapH});
-        $('.circle4').css({"left": (1208 / 1600) * $mapW, "top": (355 / 876) * $mapH});
-        $('.circle6').css({"left": (1286 / 1600) * $mapW, "top": (362 / 876) * $mapH});
-        $('.circle7').css({"left": (1345 / 1600) * $mapW, "top": (358 / 876) * $mapH});
+        $('.circle1').css({"left": (426 / 1600) * $mapW, "top": (347 / 876) * $mapH});
+        $('.circle2').css({"left": (744 / 1600) * $mapW, "top": (316 / 876) * $mapH});
+        $('.circle3').css({"left": (1226 / 1600) * $mapW, "top": (438 / 876) * $mapH});
+        $('.circle5').css({"left": (1258 / 1600) * $mapW, "top": (401 / 876) * $mapH});
+        $('.circle4').css({"left": (1225 / 1600) * $mapW, "top": (354 / 876) * $mapH});
+        $('.circle6').css({"left": (1287 / 1600) * $mapW, "top": (368 / 876) * $mapH});
+        $('.circle7').css({"left": (1343 / 1600) * $mapW, "top": (373 / 876) * $mapH});
     }
 
     $('.bigMap img').load(function () {
@@ -316,29 +316,30 @@ function myBrowser() {
             // Use this instead to favor xhr loading
             //preload = new createjs.LoadQueue(true, "assets/");
 
-            manifest = ["aaa.png",
-                "indeximg_polygon.jpg",
-                "showcase3.jpg",
-                "arrow.png",
-                "indeximg_polygon1.jpg",
-                "showcase4.jpg",
-                "bigMap.jpg",
-                "indeximg_triangle.jpg",
-                "slider_line.gif",
+            manifest = [
                 "ff.jpg",
                 "k2.jpg",
-                "trustedLogo1.jpg",
-                "icon_video_play.png",
-                "logo.png",
-                "trustedLogo2.jpg",
-                "icon_video_play1.png",
-                "page1video.jpg",
-                "video_mute.png",
                 "indexImg_FFK2.jpg",
-                "showcase1.jpg",
-                "video_pause.png",
                 "indexMap.gif",
-                "showcase2.jpg",
+                //"aaa.png",
+                //"indeximg_polygon.jpg",
+                //"showcase3.jpg",
+                //"arrow.png",
+                //"indeximg_polygon1.jpg",
+                //"showcase4.jpg",
+                //"bigMap.jpg",
+                //"indeximg_triangle.jpg",
+                //"slider_line.gif",
+                //"trustedLogo1.jpg",
+                //"icon_video_play.png",
+                //"logo.png",
+                //"trustedLogo2.jpg",
+                //"icon_video_play1.png",
+                //"page1video.jpg",
+                //"video_mute.png",
+                //"showcase1.jpg",
+                //"video_pause.png",
+                //"showcase2.jpg",
                 "showcase5.jpg",
                 "showcase6.jpg",
                 "showcase7.jpg",
