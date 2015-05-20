@@ -63,7 +63,7 @@ h1,h2 { text-transform: uppercase; }
 .indexImg img { width: 100%;}
 .main_heading { width: 90%; margin: 0 auto 130px auto; font-size: 60px; font-weight: bold;
 line-height: 60px; }
-.subheading { width: 90%; margin: 0 auto; font-size: 24px; font-weight: bold;
+.subheading { width: 90%; margin: 0 auto 40px auto; font-size: 24px; font-weight: bold;
 line-height: 60px; text-transform: uppercase; }
 .triangle { width: 90%; margin: 0 auto 138px auto; }
 .triangle img { display: block; margin: 0 auto; }
