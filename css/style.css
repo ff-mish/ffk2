@@ -141,7 +141,9 @@ line-height: 60px; text-transform: uppercase; }
 .indexMapLinks a:hover,.hotspots a.current,.circleLinks a:hover {opacity: 1; color:#0600ff;}
 
 /* 按钮动画 */
-
+.companyBox { display: block; width: 239px; height: 75px; margin-left: 85px;
+    line-height: 75px; font-size: 24px; font-weight: normal;
+    color: #fff; float: left; }
 .transition-wrap { overflow: hidden;
     -webkit-animation-duration: 1s;
     -webkit-animation-name: example2;
@@ -158,18 +160,33 @@ line-height: 60px; text-transform: uppercase; }
 .jobs_more { display: block; height: 75px; width: 239px; text-align: center;
     line-height: 75px; border: 1px solid #fff; margin: 14px auto 0; cursor: pointer;
     font-size: 24px; font-weight: normal; color: #fff; }
+.transitionDiv { position: relative; width: 100%; height: 100%; }
+.transition {
+    transition: all 0.6s ease-in-out; -webkit-transition: all 0.6s ease-in-out;
+    -moz-transition: all 0.6s ease-in-out;
+    -o-transition: all 0.6s ease-in-out; -ms-transition: all 0.6s ease-in-out;
+}
+.hideBox { position: absolute; bottom: 0; left: 0; width: 100%; height: 0;
+    background-color: #0600ff; color: #000000; text-align: center; overflow: hidden; }
+.transitionFont { display: block; position: absolute; bottom: 0; left: 0; width: 100%;
+    margin: auto; }
+.transition-wrap:hover .hideBox { height: 100%; }
+
 .transition-wrap:hover {
     -webkit-animation-duration: 1s;
     -webkit-animation-name: example;
     -webkit-animation-fill-mode : forwards;
+    border: 1px solid #0600ff;
 }
-.transition-wrap:hover .transition { margin-top: -150px; background-color: #0600ff;
-    color: #000; }
-.transition { transition: all 0.6s ease-in-out; -webkit-transition: all 0.6s ease-in-out;
-    -moz-transition: all 0.6s ease-in-out;
-    -o-transition: all 0.6s ease-in-out; -ms-transition: all 0.6s ease-in-out; }
+.transition-wrap:hover .transition { color: #000; }
 /* 按钮动画 */
 .contact_links a .jobs_more { width: 100%; height: 100%; margin: 0; overflow: hidden; }
+
+
+
+
+
+
 
 /* ie8以及以下版本 */
 .low-browser { display: none; position: relative; z-index: 9; top: 0; background-color: #0000ff; overflow: hidden; }
