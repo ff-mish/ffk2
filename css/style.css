@@ -141,15 +141,7 @@ line-height: 60px; text-transform: uppercase; }
 .indexMapLinks a:hover,.hotspots a.current,.circleLinks a:hover {opacity: 1; color:#0600ff;}
 
 /* 按钮动画 */
-.companyBox { display: block; width: 239px; height: 75px; margin-left: 85px;
-    line-height: 75px; font-size: 24px; font-weight: normal;
-    color: #fff; float: left; }
-.transition-wrap { overflow: hidden;
-    -webkit-animation-duration: 1s;
-    -webkit-animation-name: example2;
-    -webkit-animation-fill-mode : forwards;
-}
-@-webkit-keyframes example {
+@-webkit-keyframes example1 {
     from { border: 1px solid #fff; }
     to   { border: 1px solid #0600ff; }
 }
@@ -157,6 +149,10 @@ line-height: 60px; text-transform: uppercase; }
     from { border: 1px solid #0600ff; }
     to   { border: 1px solid #fff; }
 }
+.companyBox { display: block; width: 239px; height: 75px; margin-left: 85px;
+    line-height: 75px; font-size: 24px; font-weight: normal;
+    color: #fff; float: left; }
+
 .jobs_more { display: block; height: 75px; width: 239px; text-align: center;
     line-height: 75px; border: 1px solid #fff; margin: 14px auto 0; cursor: pointer;
     font-size: 24px; font-weight: normal; color: #fff; }
@@ -171,16 +167,22 @@ line-height: 60px; text-transform: uppercase; }
 .transitionFont { display: block; position: absolute; bottom: 0; left: 0; width: 100%;
     margin: auto; }
 .transition-wrap:hover .hideBox { height: 100%; }
-
 .transition-wrap:hover {
     -webkit-animation-duration: 1s;
-    -webkit-animation-name: example;
+    -webkit-animation-name: example1;
     -webkit-animation-fill-mode : forwards;
     border: 1px solid #0600ff;
 }
+.transition-wrap {
+     overflow: hidden;
+     -webkit-animation-duration: 1s;
+     -webkit-animation-name: example2;
+     -webkit-animation-fill-mode : forwards;
+ }
 .transition-wrap:hover .transition { color: #000; }
+
 /* 按钮动画 */
-.contact_links a .jobs_more { width: 100%; height: 100%; margin: 0; overflow: hidden; }
+.contact_links a .jobs_more, .companyBox { width: 100%; height: 100%; margin: 0; overflow: hidden; }
 
 
 
