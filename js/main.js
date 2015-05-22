@@ -266,6 +266,7 @@ function browserRedirect() {
 
 $(function () {
     if (browserRedirect()) {
+        console.log('phone');
         init();
         $('.indexMapLinks').css('opacity', '0');
         $('.circleWrap a').css({'width': '4px', 'height': '4px'});
@@ -308,8 +309,7 @@ function myBrowser() {
             $loadding = $("#loadding");
 
         var preload;
-        init();
-        function init() {
+        function loadimg() {
             // Create a new queue.
             preload = new createjs.LoadQueue(true, "img/");
 
@@ -363,6 +363,7 @@ function myBrowser() {
 
         }
 
+        loadimg();
         var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
         var isSafari = userAgent.indexOf("Safari") > -1 && userAgent.indexOf("Chrome") < 1; //判断是否Safari
         if (isSafari) {
