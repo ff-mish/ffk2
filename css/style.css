@@ -57,8 +57,8 @@ h1,h2 { text-transform: uppercase; }
 .btn_website { display: block; width: 239px; height: 75px; line-height: 75px; text-align: center;
  font-size: 24px; color: #fff; border: 1px solid #fff; margin: 14px auto 0 auto; }
 .btn_website:hover { border-color: #0600ff; background-color: #0600ff; color: #000; }
-.plus { margin: 361px 165px 0 165px; font-size: 36px; font-weight: bold; }
-.equal { width: 90%; margin: 232px auto 152px auto; font-size: 36px; font-weight: bold; }
+.plus { margin: 361px 165px 0 165px; font-size: 22px; font-weight: bold; }
+.equal { width: 90%; margin: 232px auto 152px auto; font-size: 22px; font-weight: bold; }
 .indexImg { width: 40%; margin: 0 auto 115px auto; }
 .indexImg img { width: 100%;}
 .main_heading { width: 90%; margin: 0 auto 130px auto; font-size: 60px; font-weight: bold;

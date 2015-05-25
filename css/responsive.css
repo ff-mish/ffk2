@@ -33,7 +33,7 @@
     .companys_inner { width: 100%; margin: 0; }
     .company { float: none; margin: 100px auto 0 auto; }
     .companyBox{float:none;}
-    .plus { margin: 100px auto 0 auto; float: none; text-align: center; }
+    .plus { margin: 100px auto 0 auto; float: none; text-align: center; font-size:22px; }
     .hotspots a { font-size: 14px; }
     .showcaseImg a { width: 48%; margin-bottom: 50px; }
     /*.contact_links { padding-bottom: 340px; }*/
@@ -42,7 +42,7 @@
     .trustedLogo { width: 460px; }
     .trustedLogo img { margin: 0; }
     .contact_links a { display: block; width: 99%; line-height: inherit; margin: 20px 0 0 0; }
-    .equal { margin: 182px auto 102px auto; }
+    .equal { margin: 102px auto 102px auto; font-size: 22px; }
     .trusted { margin-bottom: 0; }
     .mb105 {margin-bottom: 20px; }
     .indexImg {
