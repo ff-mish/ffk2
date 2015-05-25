@@ -71,11 +71,14 @@ $(function () {
         }
         if (st < height - 92) {
             $header.removeClass('fcActive');
+        } else {
+            $header.addClass('fcActive');
+        }
+        if (st < height) {
             $('body').css({background: '#fff'});
             $('.indexMap').css({background:'#fff'});
             $('.indexMap>.indexMapImg').css({opacity:1});
         } else {
-            $header.addClass('fcActive');
             $('body').css({background: '#000'});
             $('.indexMap').css({background:'#000'});
             $('.indexMap>.indexMapImg').css({opacity:0});
@@ -119,25 +122,28 @@ $.fn.tabSwitch = function () {
     var aDiv = this.find('.circleLinks a');
     aBtn.mouseover(function () {
         // marginleft/top 圆心居中执行
-        aBtn.css({'width': '8px', 'height': '8px', 'marginTop': '0px', 'marginLeft': '0px'});
-        $(this).stop().animate({width: '16px', height: '16px', 'marginTop': '-4px', 'marginLeft': '-4px'});
+        aBtn.css({'width': '8px', 'height': '8px', 'marginTop': '0px', 'marginLeft': '0px'})
+            .stop().animate({opacity:'0'},200);
+        $(this).stop().animate({width: '16px', height: '16px', 'marginTop': '-4px', 'marginLeft': '-4px',opacity:'1'},200);
         aDiv.removeClass('current');
         aDiv.eq($(this).index()).addClass('current');
     });
     aBtn.mouseout(function () {
-        aBtn.stop().css({'width': '8px', 'height': '8px', 'marginTop': '0px', 'marginLeft': '0px'});
+        aBtn.stop().css({'width': '8px', 'height': '8px', 'marginTop': '0px', 'marginLeft': '0px'})
+            .animate({opacity:'1'},200);
         aDiv.removeClass('current');
     });
     aDiv.mouseover(function () {
         aDiv.removeClass('current');
         $(this).addClass('current');
         aBtn.css({'width': '8px', 'height': '8px', 'marginTop': '0px', 'marginLeft': '0px'});
-        aBtn.stop();
-        aBtn.eq($(this).index()).animate({width: '16px', height: '16px', 'marginTop': '-4px', 'marginLeft': '-4px'});
+        aBtn.stop().animate({opacity:'0'},200);;
+        aBtn.eq($(this).index()).stop().animate({width: '16px', height: '16px', 'marginTop': '-4px', 'marginLeft': '-4px',opacity:'1'},200);
     });
     aDiv.mouseout(function () {
         aDiv.removeClass('current');
-        aBtn.stop().css({'width': '8px', 'height': '8px', 'marginTop': '0px', 'marginLeft': '0px'});
+        aBtn.stop().css({'width': '8px', 'height': '8px', 'marginTop': '0px', 'marginLeft': '0px'})
+            .stop().animate({opacity:'1'},200);
     });
 };
 
@@ -245,6 +251,8 @@ function browserRedirect() {
             TweenMax.fromTo($('#fade3'), .5, {css: {opacity: 0}},{css:{opacity:1}}), 0, -300)
             .addTween('#fade3',
             TweenMax.fromTo($('#fade4'), .5, {css: {opacity: 0}},{css:{opacity:1}}), 0, -100)
+            .addTween('#fade4',
+            TweenMax.fromTo($('#subheading'), .5, {css: {opacity: 0}},{css:{opacity:1}}), 0, -100)
             .addTween('#fade4',
             TweenMax.fromTo($('#fade5'), .5, {css: {opacity: 0}},{css:{opacity:1}}), 0, -100)
             .addTween('#fade5',

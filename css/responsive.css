@@ -31,8 +31,9 @@
     .indexMapImg{right: auto;left: 25%;}
     .indexAd { font-size: 90px; }
     .companys_inner { width: 100%; margin: 0; }
-    .company { float: none; margin: 200px auto 0 auto; }
-    .plus { margin: 200px auto 0 auto; float: none; text-align: center; }
+    .company { float: none; margin: 100px auto 0 auto; }
+    .companyBox{float:none;}
+    .plus { margin: 100px auto 0 auto; float: none; text-align: center; }
     .hotspots a { font-size: 14px; }
     .showcaseImg a { width: 48%; margin-bottom: 50px; }
     /*.contact_links { padding-bottom: 340px; }*/
