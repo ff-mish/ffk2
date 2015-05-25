@@ -298,6 +298,8 @@ $(function () {
         //禁视差
         $('.contact_links a strong').removeClass('transition-wrap');
         $('.contact_links a div').removeClass('transition');
+        $('.companyBox strong').removeClass('transition-wrap');
+        $('.companyBox div').removeClass('transition');
     }
     ;
 });
