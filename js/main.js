@@ -76,10 +76,13 @@ $(function () {
         }
         if (st < height) {
             $('body').css({background: '#fff'});
+            $('#loadding').css({background: '#000'});
+
             $('.indexMap').css({background:'#fff'});
             $('.indexMap>.indexMapImg').css({opacity:1});
         } else {
             $('body').css({background: '#000'});
+            $('#loadding').css({background: '#fff'});
             $('.indexMap').css({background:'#000'});
             $('.indexMap>.indexMapImg').css({opacity:0});
         }
@@ -363,14 +366,13 @@ function myBrowser() {
             preload.loadManifest(manifest, true, "img/");
 
             function handleOverallProgress(event) {
-                $loadding.stop().animate({width: preload.progress * 100 + "%"}, 500);
+                $loadding.stop().animate({width: (1-preload.progress) * 100 + "%"}, 500);
             }
 
             function handleComplete(event) {
-                $loadding.stop().animate({width: preload.progress * 100 + "%"}, 500, function () {
+                $loadding.stop().animate({width: (1-preload.progress) * 100 + "%"}, 500, function () {
                     $(this).fadeOut(300);
                     $sall.css('opacity', 1);
-                    $('body').css({background: '#fff'});
                 });
             }
 

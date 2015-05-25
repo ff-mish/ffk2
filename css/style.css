@@ -131,7 +131,7 @@ line-height: 60px; text-transform: uppercase; }
     /*-moz-transition: opacity .20s linear; transition: opacity .20s linear;}*/
 
 .s_all { opacity: 0; background-color: #000; }
-#loadding{ position: fixed; z-index: 99999; height: 100%; width: 0px; top: 0; left: 0; background: #fff; }
+#loadding{ position: fixed; z-index: 99999; height: 100%; width: 100%; top: 0; right: 0; background: #fff; }
 
 .tvp_overlay_poster { position: absolute; z-index: 9; left: 0; top: 0;
 	width: 100%; height: 100%; overflow: hidden; text-align: center;
