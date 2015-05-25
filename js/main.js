@@ -72,11 +72,11 @@ $(function () {
         if (st < height - 92) {
             $header.removeClass('fcActive');
             $('body').css({background: '#fff'});
-            $('.indexMap').show();
+            $('.indexMap').css({opacity:1});
         } else {
             $header.addClass('fcActive');
             $('body').css({background: '#000'});
-            $('.indexMap').hide();
+            $('.indexMap').css({opacity:0});
         }
     });
     //animate
@@ -236,31 +236,31 @@ function browserRedirect() {
             playoutAnimations: true
         });
         controller.addTween('#indexCon',
-            TweenMax.fromTo($('#fade1'), .5, {css: {opacity: 1}},{css:{opacity:1}}), 0, -100)
+            TweenMax.fromTo($('#fade1'), .5, {css: {opacity: 0}},{css:{opacity:1}}), 0, -100)
             .addTween('#fade1',
-            TweenMax.fromTo($('#fade2'), .5, {css: {opacity: 1}},{css:{opacity:1}}), 0, -100)
+            TweenMax.fromTo($('#fade2'), .5, {css: {opacity: 0}},{css:{opacity:1}}), 0, -100)
             .addTween('#fade2',
-            TweenMax.fromTo($('#fade3'), .5, {css: {opacity: 1}},{css:{opacity:1}}), 0, -300)
+            TweenMax.fromTo($('#fade3'), .5, {css: {opacity: 0}},{css:{opacity:1}}), 0, -300)
             .addTween('#fade3',
-            TweenMax.fromTo($('#fade4'), .5, {css: {opacity: 1}},{css:{opacity:1}}), 0, -100)
+            TweenMax.fromTo($('#fade4'), .5, {css: {opacity: 0}},{css:{opacity:1}}), 0, -100)
             .addTween('#fade4',
-            TweenMax.fromTo($('#fade5'), .5, {css: {opacity: 1}},{css:{opacity:1}}), 0, -100)
+            TweenMax.fromTo($('#fade5'), .5, {css: {opacity: 0}},{css:{opacity:1}}), 0, -100)
             .addTween('#fade5',
-            TweenMax.fromTo($('#fade6'), .5, {css: {opacity: 1}},{css:{opacity:1}}), 0, -100)
+            TweenMax.fromTo($('#fade6'), .5, {css: {opacity: 0}},{css:{opacity:1}}), 0, -100)
             .addTween('#fade6',
-            TweenMax.fromTo($('#fade7'), .5, {css: {opacity: 1}},{css:{opacity:1}}), 0, -100)
+            TweenMax.fromTo($('#fade7'), .5, {css: {opacity: 0}},{css:{opacity:1}}), 0, -100)
             .addTween('#fade7',
-            TweenMax.fromTo($('#fade8'), .5, {css: {opacity: 1}},{css:{opacity:1}}), 0, -300)
+            TweenMax.fromTo($('#fade8'), .5, {css: {opacity: 0}},{css:{opacity:1}}), 0, -300)
             .addTween('#fade8',
-            TweenMax.fromTo($('#fade9'), .5, {css: {opacity: 1}},{css:{opacity:1}}), 0, -300)
+            TweenMax.fromTo($('#fade9'), .5, {css: {opacity: 0}},{css:{opacity:1}}), 0, -300)
             .addTween('#fade9',
-            TweenMax.fromTo($('#fade10'), .5, {css: {opacity: 1}},{css:{opacity:1}}), 0, -100)
+            TweenMax.fromTo($('#fade10'), .5, {css: {opacity: 0}},{css:{opacity:1}}), 0, -100)
             .addTween('#fade10',
-            TweenMax.fromTo($('#showcase'), .5, {css: {opacity: 1}},{css:{opacity:1}}), 0, -100)
+            TweenMax.fromTo($('#showcase'), .5, {css: {opacity: 0}},{css:{opacity:1}}), 0, -100)
             .addTween('#showcase',
-            TweenMax.fromTo($('#fade12'), .5, {css: {opacity: 1}},{css:{opacity:1}}), 0, -100)
+            TweenMax.fromTo($('#fade12'), .5, {css: {opacity: 0}},{css:{opacity:1}}), 0, -100)
             .addTween('#fade12',
-            TweenMax.fromTo($('#contact'), .5, {css: {opacity: 1}},{css:{opacity:1}}), 0, -100)
+            TweenMax.fromTo($('#contact'), .5, {css: {opacity: 0}},{css:{opacity:1}}), 0, -100)
         ;
         return false;
     }
