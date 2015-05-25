@@ -72,11 +72,13 @@ $(function () {
         if (st < height - 92) {
             $header.removeClass('fcActive');
             $('body').css({background: '#fff'});
-            $('.indexMap').css({opacity:1});
+            $('.indexMap').css({background:'#fff'});
+            $('.indexMap>.indexMapImg').css({opacity:1});
         } else {
             $header.addClass('fcActive');
             $('body').css({background: '#000'});
-            $('.indexMap').css({opacity:0});
+            $('.indexMap').css({background:'#000'});
+            $('.indexMap>.indexMapImg').css({opacity:0});
         }
     });
     //animate
