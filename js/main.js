@@ -173,7 +173,7 @@ $(function () {
 
     }).trigger('resize');
 });
-videojs("myvideo", {"controls": true, "autoplay": false,  "poster": "img/page1video.jpg"})
+videojs("myvideo", {"controls": true, "autoplay": false, preload:"none",  "poster": "img/page1video.jpg"})
     .on('play', function () {
         $('.tvp_overlay_poster').hide();
     })
