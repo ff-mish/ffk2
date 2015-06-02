@@ -24,6 +24,7 @@ a{text-decoration:none}
 .btn {cursor: pointer;}
 .ac { text-align: center; }
 .fl { float: left; }
+.fr { float: right; }
 .f36 { font-size: 36px; }
 .f14 { font-size: 14px; }
 .f144 { font-size: 14.4px; }
@@ -48,16 +49,15 @@ h1,h2 { text-transform: uppercase; }
 	background: url("../img/arrow.png") no-repeat; }
 .indexCon { position: relative; z-index: 3; background-color: #000; color: #fff; }
 .companys { width: 90%; margin: 0 auto; }
-.companys_inner { width: 1180px; margin: 0 auto; }
-.company { width: 410px; margin-top: 160px; }
-.companyR { margin-top: 160px; }
+.companys_inner { width: 100%; position: relative; }
+.company { margin-top: 160px; }
 .company img { display: block; margin: 0 auto 45px auto; }
 .company p { font-size: 24px; font-weight: lighter; text-transform: uppercase; line-height: 30px; }
 .speed { display: block; font-size: 36px; font-weight: bold; margin: 18px 0 25px 0; }
 .btn_website { display: block; width: 239px; height: 75px; line-height: 75px; text-align: center;
  font-size: 24px; color: #fff; border: 1px solid #fff; margin: 14px auto 0 auto; }
 .btn_website:hover { border-color: #0600ff; background-color: #0600ff; color: #000; }
-.plus { margin: 361px 165px 0 165px; font-size: 22px; font-weight: bold; }
+.plus { position: absolute; top: 50%; left: 50%; font-size: 22px; font-weight: bold; }
 .equal { width: 90%; margin: 232px auto 152px auto; font-size: 22px; font-weight: bold; }
 .indexImg { width: 40%; margin: 0 auto 115px auto; }
 .indexImg img { width: 100%;}
