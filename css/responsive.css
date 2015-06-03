@@ -11,7 +11,7 @@
     .companyR { margin-right: 10%; }
 }
 @media only screen and (max-width:1450px){
-    .contact_links a { width: 32%; margin: 0 2px; }
+    .contact_links a { width: 31%; margin: 0 1%; }
     .indexMapLinks { right: 3%; }
     .indexMapLinks a { margin-right: 100px; }
     .companyL { margin-left: 0; }
@@ -41,6 +41,7 @@
     .indexAd { font-size: 90px; }
     .companys_inner { width: 100%; margin: 0; }
     .company { float: none; margin: 100px auto 0 auto; }
+    .companyR { margin-top: 0; }
     .companyBox { float: none; }
     .plus { position: static; margin: 100px auto; font-size:22px;
         text-align: center;}
@@ -71,7 +72,7 @@
     .f72 { font-size: 56px; }
     .trustedLogo { width: 100%; margin: 0; }
     .trustedLogo img { margin: 0; }
-    .main_heading { font-size: 40px; line-height: 40px; }
+    .main_heading { font-size: 36px; line-height: 36px; }
 }
 @media only screen and (max-width:580px){
     .f72 { font-size: 50px; }
@@ -89,6 +90,7 @@
 }
 @media only screen and (max-width:320px){  
     .company { width: 100%; margin-top: 150px; }
+    .companyR { margin-top: 0; }
     .company p { font-size: 16px; }
     /*.plus { margin-top: 150px; }*/
     .f72 { font-size: 30px; }

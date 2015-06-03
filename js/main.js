@@ -233,6 +233,8 @@ function browserRedirect() {
         $('.circleWrap a').unbind();
         //contact模块一屏
 
+        $('#sfmap').src('/img/sfmap.jpg');
+
         $(window).resize(function () {
             var contactHeight = $(window).height();
             //$('.contact').height(contactHeight>530?contactHeight:530);
