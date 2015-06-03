@@ -229,6 +229,7 @@ function browserRedirect() {
     if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
         //console.log("phone");
         $('.indexMapImg,.indexAd').css({position: 'absolute'});
+        $('.indexMapImg').css({position: 'relative'});
         $('.circleLinks a').unbind();
         $('.circleWrap a').unbind();
         //contact模块一屏

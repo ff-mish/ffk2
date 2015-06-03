@@ -37,7 +37,8 @@
 }
 @media only screen and (max-width:800px){
     .indexMapLinks a { margin-right: 50px; }
-    .indexMapImg{right: auto;left: 25%;}
+    .indexMapImg{right: auto;height:100%;}
+    .indexMapImg>img{width:1;height:100%;}
     .indexAd { font-size: 90px; }
     .companys_inner { width: 100%; margin: 0; }
     .company { float: none; margin: 100px auto 0 auto; }
