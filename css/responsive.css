@@ -61,6 +61,7 @@
         width: 90%;
         margin: 0 auto 115px auto;
     }
+    .placeholderDiv { height: 0; }
 }
 @media only screen and (max-width:700px){
     .indexMapLinks a { margin-right: 40px; }
