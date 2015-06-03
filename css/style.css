@@ -51,6 +51,8 @@ h1,h2 { text-transform: uppercase; }
 .companys { width: 90%; margin: 0 auto; }
 .companys_inner { width: 100%; position: relative; }
 .company { margin-top: 160px; }
+.companyL { margin-left: 18%; }
+.companyR { margin-right: 18%; }
 .company img { display: block; margin: 0 auto 45px auto; }
 .company p { font-size: 24px; font-weight: lighter; text-transform: uppercase; line-height: 30px; }
 .speed { display: block; font-size: 36px; font-weight: bold; margin: 18px 0 25px 0; }

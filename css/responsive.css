@@ -2,11 +2,20 @@
 @media only screen and (min-width:1600px){
     .indexImg { width: 640px; }
 }
-
+@media only screen and (max-width:2300px){
+    .companyL { margin-left: 14%; }
+    .companyR { margin-right: 14%; }
+}
+@media only screen and (max-width:1800px){
+    .companyL { margin-left: 10%; }
+    .companyR { margin-right: 10%; }
+}
 @media only screen and (max-width:1450px){
     .contact_links a { width: 32%; margin: 0 2px; }
     .indexMapLinks { right: 3%; }
     .indexMapLinks a { margin-right: 100px; }
+    .companyL { margin-left: 0; }
+    .companyR { margin-right: 0; }
 }
 @media only screen and (max-width:1300px){
     .indexAd { font-size: 90px; margin-top: -90px; }
