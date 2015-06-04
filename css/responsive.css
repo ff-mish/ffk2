@@ -62,6 +62,11 @@
         margin: 0 auto 115px auto;
     }
     .placeholderDiv { height: 0; }
+
+    .showcaseImg a.showcase1:hover span { background-image: url("../img/showcase1.jpg"); }
+    .showcaseImg a.showcase2:hover span { background-image: url("../img/showcase2.jpg"); }
+    .showcaseImg a.showcase3:hover span { background-image: url("../img/showcase3.jpg"); }
+    .showcaseImg a.showcase4:hover span { background-image: url("../img/showcase4.jpg"); }
 }
 @media only screen and (max-width:700px){
     .indexMapLinks a { margin-right: 40px; }
