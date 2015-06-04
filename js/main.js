@@ -178,7 +178,7 @@ videojs("myvideo", {"controls": true, "autoplay": false, preload:"none",  "poste
         $('.tvp_overlay_poster').hide();
     })
     .on('pause', function () {
-        $('.tvp_overlay_poster').show();
+        //$('.tvp_overlay_poster').show();
     })
     .on('ended', function () {
         $('.tvp_overlay_poster').show();
