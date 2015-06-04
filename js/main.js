@@ -154,7 +154,7 @@ $.fn.tabSwitch = function () {
 $(function () {
     $(window).scrollTop($(window).scrollTop()+1);
     $(window).resize(function () {
-        var height = $(window).width() * 1.0 / (1280 / 720);
+        var height = $(window).width() * 1.0 / (1280 / 546);
         $('#myvideo').height(height);
         //contact模块一屏
         var contactHeight = $(window).height();
