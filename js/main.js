@@ -179,6 +179,9 @@ videojs("myvideo", {"controls": true, "autoplay": false, preload:"none",  "poste
     })
     .on('pause', function () {
         //$('.tvp_overlay_poster').show();
+        if (!browserRedirect()) {
+            $('.vjs-big-play-button').hide();
+        }
     })
     .on('ended', function () {
         $('.tvp_overlay_poster').show();
@@ -227,6 +230,16 @@ function browserRedirect() {
     var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
     // document.writeln("您的浏览设备为：");
     if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+$(function () {
+    if (browserRedirect()) {
+        console.log('phone');
+
         //console.log("phone");
         $('.indexMapImg,.indexAd').css({position: 'absolute'});
         $('.indexMapImg').css({position: 'relative'});
@@ -243,8 +256,31 @@ function browserRedirect() {
             //$('.contacttitle').css({marginTop: (contactHeight - 360) / 2});
         }).trigger('resize');
 
-        return true;
-    } else {
+
+        init();
+        $('.indexMapLinks').css('opacity', '0');
+        $('.circleWrap a').css({'width': '4px', 'height': '4px'});
+        //禁视差
+        var $win = $(window), $header = $(".indexMapLinks"), height = $win.height(), st;
+        $win.scroll(function (e) {
+            st = $win.scrollTop();
+            if (st < height && st > 1) {
+                $('.indexAd').css('margin-top', -70);
+                $('.indexMapImg').css('margin-top', 0);
+            }
+        });
+        //禁视差
+        $('.contact_links a strong').removeClass('transition-wrap');
+        $('.contact_links a div').removeClass('transition');
+        $('.companyBox strong').removeClass('transition-wrap');
+        $('.companyBox div').removeClass('transition');
+
+        $('#myvideo_html5_api').attr({'src':'video/4.mp4'});
+        $('#myvideo_html5_api').children('source').attr({'src':'video/4.mp4'});
+        console.log($('#myvideo_html5_api').html());
+    }else{
+
+
         //console.log("pc");
         var controller = $.superscrollorama({
             triggerAtCenter: false,
@@ -279,34 +315,6 @@ function browserRedirect() {
             .addTween('#fade12',
             TweenMax.fromTo($('#contact'), .5, {css: {opacity: 0}},{css:{opacity:1}}), 0, -500)
         ;
-        return false;
-    }
-}
-
-$(function () {
-    if (browserRedirect()) {
-        console.log('phone');
-        init();
-        $('.indexMapLinks').css('opacity', '0');
-        $('.circleWrap a').css({'width': '4px', 'height': '4px'});
-        //禁视差
-        var $win = $(window), $header = $(".indexMapLinks"), height = $win.height(), st;
-        $win.scroll(function (e) {
-            st = $win.scrollTop();
-            if (st < height && st > 1) {
-                $('.indexAd').css('margin-top', -70);
-                $('.indexMapImg').css('margin-top', 0);
-            }
-        });
-        //禁视差
-        $('.contact_links a strong').removeClass('transition-wrap');
-        $('.contact_links a div').removeClass('transition');
-        $('.companyBox strong').removeClass('transition-wrap');
-        $('.companyBox div').removeClass('transition');
-
-        $('#myvideo_html5_api').attr({'src':'video/4.mp4'});
-        $('#myvideo_html5_api').children('source').attr({'src':'video/4.mp4'});
-        console.log($('#myvideo_html5_api').html());
     }
     ;
 });
