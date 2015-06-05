@@ -157,9 +157,9 @@ $(function () {
         var height = $(window).width() * 1.0 / (1280 / 546);
         $('#myvideo').height(height);
         //contact模块一屏
-        var contactHeight = $(window).height();
-        $('.contact').height(contactHeight > 600 ? contactHeight : 600);
-        $('.contacttitle').css({marginTop: (contactHeight - 300) / 2});
+        //var contactHeight = $(window).height();
+        //$('.contact').height(contactHeight > 600 ? contactHeight : 600);
+        //$('.contacttitle').css({marginTop: (contactHeight - 300) / 2});
 
         if($(window).width()>1450){
             var conttactlinksWidth = 0;
@@ -239,8 +239,8 @@ function browserRedirect() {
         $(window).resize(function () {
             var contactHeight = $(window).height();
             //$('.contact').height(contactHeight>530?contactHeight:530);
-            $('.contact').height(contactHeight > 440 ? contactHeight : 440);
-            $('.contacttitle').css({marginTop: (contactHeight - 360) / 2});
+            //$('.contact').height(contactHeight > 440 ? contactHeight : 440);
+            //$('.contacttitle').css({marginTop: (contactHeight - 360) / 2});
         }).trigger('resize');
 
         return true;
@@ -277,7 +277,7 @@ function browserRedirect() {
             .addTween('#showcase',
             TweenMax.fromTo($('#fade12'), .5, {css: {opacity: 0}},{css:{opacity:1}}), 0, -100)
             .addTween('#fade12',
-            TweenMax.fromTo($('#contact'), .5, {css: {opacity: 0}},{css:{opacity:1}}), 0, -100)
+            TweenMax.fromTo($('#contact'), .5, {css: {opacity: 0}},{css:{opacity:1}}), 0, -500)
         ;
         return false;
     }

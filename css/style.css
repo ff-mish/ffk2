@@ -95,7 +95,7 @@ line-height: 60px; text-transform: uppercase; }
 .video { margin-bottom: 200px; }
 
 
-.contact { width: 90%; margin: 0 auto; }
+.contact { width: 90%; margin: 0 auto 200px auto; }
 .contact_links {margin: auto;}
 .contact_links a { display: block; width: 344px; height: 65px; margin: 0 41px;
 	line-height: 65px; font-size: 24px; font-weight: 100;
