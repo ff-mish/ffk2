@@ -247,7 +247,7 @@ $(function () {
         $('.circleWrap a').unbind();
         //contact模块一屏
 
-        $('#sfmap').attr('src','http://cdn.ffk2.com/img/sfmap.jpg');
+        $('#sfmap').attr('src','http://cdn.ffk2.com/img/bigMap_mobile_copy_(1).jpg');
 
         $(window).resize(function () {
             var contactHeight = $(window).height();
