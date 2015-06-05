@@ -247,7 +247,7 @@ $(function () {
         $('.circleWrap a').unbind();
         //contact模块一屏
 
-        $('#sfmap').attr('src','/img/sfmap.jpg');
+        $('#sfmap').attr('src','http://cdn.ffk2.com/img/sfmap.jpg');
 
         $(window).resize(function () {
             var contactHeight = $(window).height();
@@ -344,7 +344,7 @@ function myBrowser() {
         var preload;
         function loadimg() {
             // Create a new queue.
-            preload = new createjs.LoadQueue(true, "img/");
+            preload = new createjs.LoadQueue(true, "http://cdn.ffk2.com/img/");
 
             // Use this instead to favor xhr loading
             //preload = new createjs.LoadQueue(true, "assets/");
@@ -380,7 +380,7 @@ function myBrowser() {
             ];
             preload.on("progress", handleOverallProgress);
             preload.on("complete", handleComplete);
-            preload.loadManifest(manifest, true, "img/");
+            preload.loadManifest(manifest, true, "http://cdn.ffk2.com/img/");
 
             function handleOverallProgress(event) {
                 $loadding.stop().animate({width: (1-preload.progress) * 100 + "%"}, 500);

@@ -185,19 +185,19 @@
     }
 
     .showcaseImg a.showcase1:hover span {
-        background-image: url("../img/showcase1.jpg");
+        background-image: url("http://cdn.ffk2.com/img/showcase1.jpg");
     }
 
     .showcaseImg a.showcase2:hover span {
-        background-image: url("../img/showcase2.jpg");
+        background-image: url("http://cdn.ffk2.com/img/showcase2.jpg");
     }
 
     .showcaseImg a.showcase3:hover span {
-        background-image: url("../img/showcase3.jpg");
+        background-image: url("http://cdn.ffk2.com/img/showcase3.jpg");
     }
 
     .showcaseImg a.showcase4:hover span {
-        background-image: url("../img/showcase4.jpg");
+        background-image: url("http://cdn.ffk2.com/img/showcase4.jpg");
     }
 }
 
