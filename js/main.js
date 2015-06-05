@@ -179,7 +179,7 @@ videojs("myvideo", {"controls": true, "autoplay": false, preload:"none",  "poste
     })
     .on('pause', function () {
         //$('.tvp_overlay_poster').show();
-        if (!browserRedirect()) {
+        if (browserRedirect()) {
             $('.vjs-big-play-button').hide();
         }
     })
