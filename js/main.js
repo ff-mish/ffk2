@@ -154,7 +154,7 @@ $.fn.tabSwitch = function () {
 $(function () {
     $(window).scrollTop($(window).scrollTop()+1);
     $(window).resize(function () {
-        var height = $(window).width() * 1.0 / (1280 / 546);
+        var height = $(window).width() * 1.0 / (1280 / 720);
         $('#myvideo').height(height);
         //contact模块一屏
         //var contactHeight = $(window).height();
@@ -275,8 +275,8 @@ $(function () {
         $('.companyBox strong').removeClass('transition-wrap');
         $('.companyBox div').removeClass('transition');
 
-        $('#myvideo_html5_api').attr({'src':'http://cdn.ffk2.com/video/4.mp4'});
-        $('#myvideo_html5_api').children('source').attr({'src':'http://cdn.ffk2.com/video/4.mp4'});
+        $('#myvideo_html5_api').attr({'src':'http://cdn.ffk2.com/video/mobile.mp4'});
+        $('#myvideo_html5_api').children('source').attr({'src':'http://cdn.ffk2.com/video/mobile.mp4'});
         console.log($('#myvideo_html5_api').html());
     }else{
 
