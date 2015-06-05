@@ -173,7 +173,7 @@ $(function () {
 
     }).trigger('resize');
 });
-videojs("myvideo", {"controls": true, "autoplay": false, preload:"none",  "poster": "img/page1video.jpg"})
+videojs("myvideo", {"controls": true, "autoplay": false, preload:"none",  "poster": "http://cdn.ffk2.com/img/page1video.jpg"})
     .on('play', function () {
         $('.tvp_overlay_poster').hide();
     })
@@ -275,8 +275,8 @@ $(function () {
         $('.companyBox strong').removeClass('transition-wrap');
         $('.companyBox div').removeClass('transition');
 
-        $('#myvideo_html5_api').attr({'src':'video/4.mp4'});
-        $('#myvideo_html5_api').children('source').attr({'src':'video/4.mp4'});
+        $('#myvideo_html5_api').attr({'src':'http://cdn.ffk2.com/video/4.mp4'});
+        $('#myvideo_html5_api').children('source').attr({'src':'http://cdn.ffk2.com/video/4.mp4'});
         console.log($('#myvideo_html5_api').html());
     }else{
 
