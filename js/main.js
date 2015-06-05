@@ -173,7 +173,7 @@ $(function () {
 
     }).trigger('resize');
 });
-videojs("myvideo", {"controls": true, "autoplay": false, preload:"none",  "poster": "http://cdn.ffk2.com/img/page1video.jpg"})
+videojs("myvideo", {"controls": true, "autoplay": false, preload:"none",  "poster": "http://cdn.ffk2.com/img/cover.jpg"})
     .on('play', function () {
         $('.tvp_overlay_poster').hide();
     })
