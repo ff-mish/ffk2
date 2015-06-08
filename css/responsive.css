@@ -129,6 +129,10 @@
         text-align: center;
     }
 
+    .video {
+        margin-bottom: 140px;
+    }
+
     .hotspots a {
         font-size: 14px;
     }
@@ -168,7 +172,7 @@
     }
 
     .trusted {
-        margin-bottom: 0;
+        margin-bottom: 140px;
     }
 
     .mb105 {
@@ -182,6 +186,14 @@
 
     .placeholderDiv {
         height: 0;
+    }
+
+    .showcase{
+        margin-bottom: 140px;
+    }
+
+    ..contact{
+        margin-bottom: 140px;
     }
 
     .showcaseImg a.showcase1:hover span {
