@@ -285,6 +285,9 @@ $(function () {
         $('#myvideo_html5_api').attr({'src':'http://cdn.ffk2.com/video/mobile.mp4'});
         $('#myvideo_html5_api').children('source').attr({'src':'http://cdn.ffk2.com/video/mobile.mp4'});
         console.log($('#myvideo_html5_api').html());
+
+        $('.tvp_overlay_poster').hide();
+        $('.vjs-poster').hide();
     }else{
 
 
