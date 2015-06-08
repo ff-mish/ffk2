@@ -56,6 +56,9 @@ $(function () {
 
     //animate
     var $win = $(window), $header = $(".indexMapLinks"), height = $win.height(), st;
+    $win.resize(function () {
+        height = $win.height()
+    });
     var indexAdMT = 141;
     if ($win.width() < 1300) {
         indexAdMT = 90;
