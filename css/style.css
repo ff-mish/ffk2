@@ -17,6 +17,8 @@ textarea,input {-webkit-user-select: text;-khtml-user-select: text;-moz-user-sel
 
 /* Commonly Used 
 ================================================================================================= */
+
+html{background: black;}
 a{text-decoration:none}
 .cs-clear{+zoom:1;}
 .cs-clear:before,

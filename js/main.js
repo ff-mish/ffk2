@@ -303,6 +303,8 @@ $(function () {
             .addTween('#fade6',
             TweenMax.fromTo($('#fade7'), .5, {css: {opacity: 0}},{css:{opacity:1}}), 0, -100)
             .addTween('#fade7',
+            TweenMax.fromTo($('#fade12'), .5, {css: {opacity: 0}},{css:{opacity:1}}), 0, -100)
+            .addTween('#fade12',
             TweenMax.fromTo($('#fade8'), .5, {css: {opacity: 0}},{css:{opacity:1}}), 0, -300)
             .addTween('#fade8',
             TweenMax.fromTo($('#fade9'), .5, {css: {opacity: 0}},{css:{opacity:1}}), 0, -300)
@@ -311,8 +313,6 @@ $(function () {
             .addTween('#fade10',
             TweenMax.fromTo($('#showcase'), .5, {css: {opacity: 0}},{css:{opacity:1}}), 0, -100)
             .addTween('#showcase',
-            TweenMax.fromTo($('#fade12'), .5, {css: {opacity: 0}},{css:{opacity:1}}), 0, -100)
-            .addTween('#fade12',
             TweenMax.fromTo($('#contact'), .5, {css: {opacity: 0}},{css:{opacity:1}}), 0, -500)
         ;
     }
