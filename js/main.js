@@ -192,10 +192,20 @@ videojs("myvideo", {"controls": true, "autoplay": false, preload:"none",  "poste
     .on('ended', function () {
         $('.tvp_overlay_poster').show();
         $('.vjs-poster').show();
+        if (browserRedirect()) {
+            $('.vjs-big-play-button').hide();
+            $('.tvp_overlay_poster').hide();
+            $('.vjs-poster').hide();
+        }
     }
 );
 $('.tvp_overlay_poster').appendTo('#myvideo');
 
+if (browserRedirect()) {
+    $('.vjs-big-play-button').hide();
+    $('.tvp_overlay_poster').hide();
+    $('.vjs-poster').hide();
+}
 //判断移动端横屏
 
 var orientLayer = document.getElementById("orientLayer");
@@ -286,8 +296,6 @@ $(function () {
         $('#myvideo_html5_api').children('source').attr({'src':'http://cdn.ffk2.com/video/mobile.mp4'});
         console.log($('#myvideo_html5_api').html());
 
-        $('.tvp_overlay_poster').hide();
-        $('.vjs-poster').hide();
     }else{
 
 
