@@ -46,6 +46,7 @@ $(function () {
         $('.indexMap').css('height', $(window).height() + 'px');
 
         $('.low-browser').css('height', $(window).height() + 'px');
+
     });
 
     $('#slideAlink').click(function () {
@@ -174,6 +175,8 @@ $(function () {
             $('.contact_links').width('90%');
         }
 
+        var contactHeight = $(window).height();
+        $('.indexMapImg>img').height(contactHeight).width(contactHeight/1086*1036);
     }).trigger('resize');
 });
 videojs("myvideo", {"controls": true, "autoplay": false, preload:"none",  "poster": "http://cdn.ffk2.com/img/cover.jpg"})
@@ -257,6 +260,7 @@ $(function () {
             //$('.contact').height(contactHeight>530?contactHeight:530);
             //$('.contact').height(contactHeight > 440 ? contactHeight : 440);
             //$('.contacttitle').css({marginTop: (contactHeight - 360) / 2});
+            //$('.indexMapImg>img').height(contactHeight).width(contactHeight/1086*1036);
         }).trigger('resize');
 
 
