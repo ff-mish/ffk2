@@ -113,7 +113,7 @@ $(function () {
         $('html,body').animate({scrollTop: b}, 500);
     });
     $('.indexMapLinks3').click(function () {
-        var b = $('#showcase').offset().top;
+        var b = $('#fade12').offset().top;
         $('html,body').animate({scrollTop: b}, 500);
     });
     $('.indexMapLinks4').click(function () {
